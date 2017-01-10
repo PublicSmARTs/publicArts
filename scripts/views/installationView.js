@@ -5,8 +5,8 @@
 
   var render = function(installation) {
     var template = Handlebars.compile($('#installation-template').text());
-    
-  }
+    return template(installation);
+  };
 
   installationView.initNewInstallationPage = function() {
 
@@ -14,12 +14,9 @@
 
 
   installationView.create = function() {
-    var formInstallation;
-    $('#display-installation').empty();
-    console.log($('#new-installation'));
     $('#new-installation').on('click', 'button', function(e){
+      var formInstallation;
       e.preventDefault();
-      console.log('anything');
       formInstallation = new Installation({
         location: $('#installation-location').val(),
         medium: $('#installation-medium').val(),
@@ -30,14 +27,13 @@
         // description: $('#installation-description')
         // imageUrl: $('#installation-image-url')
       });
-      Installation.insertRecord(formInstallation);
+      //formInstallation.insertRecord();
       e.delegateTarget.reset();
-      //redirect here
-      //loveController.reveal();
-      $('#display-installation').append(render(formArticle));
-
+      //redirect here --TEMP SOLUTION
+      loveController.reveal();
+      $('#display-installation').empty();
+      $('#display-installation').append(render(formInstallation));
     });
-
   };
 
   module.installationView = installationView;
