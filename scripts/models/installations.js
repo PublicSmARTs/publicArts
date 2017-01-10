@@ -1,6 +1,5 @@
 
 (function(module) {
-  console.log('in installations.js');
 
   function Installation(opts){
     Object.keys(opts).forEach(function(e, index, keys) {
@@ -61,7 +60,7 @@
       });
 
     });
-    console.log('Installation is ', Installation.medium);
+
   };
 
   Installation.createTable(myTemp);
