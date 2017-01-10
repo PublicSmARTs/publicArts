@@ -1,4 +1,4 @@
-
+'use strict';
 (function(module) {
 
   function Installation(opts){
@@ -8,7 +8,6 @@
   }
 
   function myTemp(){
-    console.log('just in the callback dummy');
   };
 
   Installation.all = [];
@@ -50,8 +49,6 @@
   };
 
   Installation.fetchAll = function(callback) {
-    console.log('in fetch all');
-
     $.getJSON('/data/installations.json', function(rawData) {
           // Cache the json, so we don't need to request it next time:
       rawData.forEach(function(item) {
