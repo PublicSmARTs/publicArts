@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Public Arts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/vendor/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/modules.css">
+    <script id="new-installation-template" type="text/x-handlebars-template">
+      <!-- template to create new installations -->
+    </script>
+    <script id="option-template" type="text/x-handlebars-template">
+      <!-- template for filters for installation properties -->
+      <option value="{{val}}">{{val}}</option>
+    </script>
+    <script id="existing-installation-template" type="text/x-handlebars-template">
+      <!-- template to view existing installations -->
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <div class="">LOGO</div>
+        <ul>
+          <li class="tab" data-content="home"><a href="/">HOME</a></li>
+          <li class="tab" data-content="find-art"><a href="/findart">FIND ART</a></li>
+          <li class="tab" data-content="share-art"><a href="/shareart">SHARE ART</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="home" class="tab-content">
+
+      </section>
+      <section id="find-art" class="tab-content">
+
+      </section>
+      <section id="share-art" class="tab-content">
+
+      </section>
+      <section id="love-art" class="tab-content">
+
+      </section>
+      <footer>
+
+      </footer>
+
+      <!-- Vendor files: -->
+      <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js"></script> -->
+      <!-- <script src="/vendor/scripts/html5sql.js"></script> -->
+      <!-- <script src="https://cdn.rawgit.com/download/webdb/0.4.1/dist/webdb.min.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.min.js"></script>
+
+      <!-- Model files: -->
+      <script src="/scripts/models/"></script>
+
+      <!-- View files: -->
+      <script src="/scripts/views/"></script>
+
+      <!-- Controller files: -->
+      <script src="/scripts/controllers/"></script>
+      <script src="/scripts/controllers/"></script>
+      <script src="/scripts/controllers/"></script>
+    </main>
+  </body>
+</html>
