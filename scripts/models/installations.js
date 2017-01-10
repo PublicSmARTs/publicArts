@@ -51,17 +51,30 @@
 
   Installation.fetchAll = function(callback) {
     console.log('in fetch all');
-
-    $.getJSON('/data/installations.json', function(rawData) {
+    //assume table is loaded and ready to read
+    webDB.execute('SELECT * FROM Installations', function(rows){
+      if (rows.length) {
+        Installation.loadAll(rows);
+        callback();
+      } else {
+        //if table was empty, look for local file to read
+        $.getJSON('/data/installations.json', function(rawData) {
           // Cache the json, so we don't need to request it next time:
-      rawData.forEach(function(item) {
-        var installation = new Installation(item); // Instantiate an Installation based on item from JSON
-        installation.insertRecord(myTemp);
-      });
-
-    });
-
-  };
+          rawData.forEach(function(item) {
+            var installation = new Installation(item); // Instantiate an Installation based on item from JSON
+            installation.insertRecord(myTemp);
+          });
+          //populated the table now call
+          webDb.execute('SELECT * FROM Installations', function(rows){
+            if (rows.length) {
+              Installation.loadAll(rows);
+              callback();
+            }
+          }); //select from installations
+        }); //getJSON
+      };//end else
+    }); //execute select
+  };//fetchAll
 
   Installation.createTable(myTemp);
   Installation.fetchAll(myTemp);
