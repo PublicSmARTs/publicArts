@@ -1,0 +1,30 @@
+img {
+  max-width: 100%;
+}
+
+body {
+  font-size: 100%;
+  color: #404041;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noticia Text', serif;
+}
+
+p {
+  font-family: 'Quicksand', sans-serif;
+}
+
+main {
+  margin: auto;
+}
+
+/*-----TEXT STYLES-----*/
+p {
+  font-size: 1em;
+}
+
+/*-----LINK STYLES-----*/
+
+
+/*-----FORM STYLES-----*/
