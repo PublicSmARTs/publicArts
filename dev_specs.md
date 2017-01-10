@@ -1,3 +1,19 @@
+#SAMPLE INSTALLATION OBJECT
+[
+  {
+    "location": "", (some type of information from google maps - tbd)
+    "medium": "", (architecture, sculpture, mural, painting, stained glass, ceramics, mosaics, tapestry, collections, earthworks, installation)
+    "artist": "", (open text field)
+    "title": "", (open text field)
+    "dateRange": "", (pre-1900, 1900-1920, 1920-40, 1940-1960, 1960-1980, 1980-2000, after 2000)
+    "sanctioned": true/false,
+    "description": "", (open text field)
+    "imageUrl": "", (list of urls)
+    "resources": "", (list of urls)
+    "comments": "" (list of comments)
+  }
+]
+
 #FILE STRUCTURE
 
 - DATA:
