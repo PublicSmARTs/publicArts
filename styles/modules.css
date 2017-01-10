@@ -4,6 +4,12 @@
   height: 3px;
 }
 
+.thin-line {
+  background-color: #404041;
+  width: 100%;
+  height: 1.5px;
+}
+
 .hamburger_menu {
   float: right;
   height: 100px;

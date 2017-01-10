@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
     <script id="new-installation-template" type="text/x-handlebars-template">
-      <!-- template to create new installations -->
+
     </script>
     <script id="option-template" type="text/x-handlebars-template">
       <!-- template for filters for installation properties -->
@@ -47,6 +47,7 @@
         <header class="page-header">
           <h1 class="page-title">FIND ART</h1>
           <img src="/assets/5-pins-plain.svg" class="pins-logo">
+          <div class="thin-line"></div>
         </header>
       </section>
 
@@ -54,13 +55,48 @@
         <header class="page-header">
           <h1 class="page-title">SHARE ART</h1>
           <img src="/assets/palette.svg" class="header-art">
+          <div class="thin-line"></div>
         </header>
+        <section>
+          <h3>New Installation</h3>
+          <form class="new-form" action="#">
+            <label>ADDRESS:
+              <input type="text" id="installation-location" placeholder="INSTALLATION ADDRESS" required>
+            </label>
+            <label>MEDIUM:
+              <input type="text" id="installation-medium" placeholder="NEED TO MAKE DROP DOWN MENU" required>
+            </label>
+            <label>ARTIST:
+              <input type="text" id="installation-artist" placeholder="ARTIST NAME IF KNOWN">
+            </label>
+            <label>TITLE:
+              <input type="text" id="installation-title" placeholder="TITLE OF INSTALLATION IF KNOWN">
+            </label>
+            <label>DATE RANGE:
+              <input type="text" id="installation-date-range" placeholder="NEED TO MAKE DROP DOWN MENU">
+            </label>
+            <label>SANCTIONED:
+              <input type="checkbox" id="installation-sanctioned">
+            </label>
+            <label>DESCRIPTION:
+              <input type="text" id="installation-description" placeholder="ADD DESCRIPTION OF INSTALLATION">
+            </label>
+            <label>IMAGE URL:
+              <input type="url" id="installation-image-url" placeholder="ADD URL TO IMAGE">
+            </label>
+            <!-- <label>RESOURCES:
+              <input type="url" id="installation-image-url" placeholder="ADD URL TO IMAGE">
+            </label> -->
+            <button type="submit" name="button">ADD NEW INSTALLATION</button>
+          </form>
+        </section>
       </section>
 
       <section id="loveart" class="tab-content">
         <header class="page-header">
           <h1 class="page-title">LOVE ART</h1>
           <img src="/assets/heart.svg" class="header-art">
+          <div class="thin-line"></div>
         </header>
         <img src="/assets/5-pins-pencils.svg">
       </section>
