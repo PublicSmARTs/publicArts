@@ -1,0 +1,38 @@
+[
+  {
+    "location": "2nd Ave and Main St",
+    "medium": "sculpture",
+    "artist": "Bob",
+    "title": "Unknown",
+    "dateRange": "1900-1920",
+    "sanctioned": true,
+    "description": "This is a sculpture of a cat.",
+    "imageUrl": "www.google.com",
+    "resources": "www.google.com",
+    "comments": "This is my favorite sculpture."
+  },
+  {
+    "location": "3rd Ave and Holman St",
+    "medium": "mural",
+    "artist": "Bob",
+    "title": "Unknown",
+    "dateRange": "1920-1940",
+    "sanctioned": false,
+    "description": "This is a mural of a dog.",
+    "imageUrl": "www.google.com",
+    "resources": "www.google.com",
+    "comments": "This is the ugliest mural."
+  },
+  {
+    "location": "4th Ave and Pearl St",
+    "medium": "sculpture",
+    "artist": "Fred",
+    "title": "Unknown",
+    "dateRange": "1980-2000",
+    "sanctioned": true,
+    "description": "This is a sculpture of a mongoose.",
+    "imageUrl": "www.google.com",
+    "resources": "www.google.com",
+    "comments": "This is the best ever."
+  }
+]
