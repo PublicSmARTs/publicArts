@@ -1,0 +1,23 @@
+{
+  "name": "public-arts",
+  "version": "1.0.0",
+  "description": "A clever public art tool to track or add locations of public art.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PublicSmARTs/publicArts.git"
+  },
+  "author": "\"PublicSmARTs\"",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PublicSmARTs/publicArts/issues"
+  },
+  "homepage": "https://github.com/PublicSmARTs/publicArts#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-request-proxy": "^2.0.0"
+  }
+}
