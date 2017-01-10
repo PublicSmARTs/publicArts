@@ -4,7 +4,7 @@
   "description": "A clever public art tool to track or add locations of public art.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
