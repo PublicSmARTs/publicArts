@@ -1,4 +1,4 @@
-
+'use strict';
 (function(module) {
 
   function Installation(opts){
@@ -8,7 +8,6 @@
   }
 
   function myTemp(){
-    console.log('just in the callback dummy');
   };
 
   Installation.all = [];
@@ -50,7 +49,6 @@
   };
 
   Installation.fetchAll = function(callback) {
-    console.log('in fetch all');
     //assume table is loaded and ready to read
     webDB.execute('SELECT * FROM Installations', function(rows){
       if (rows.length) {
@@ -65,7 +63,7 @@
             installation.insertRecord(myTemp);
           });
           //populated the table now call
-          webDb.execute('SELECT * FROM Installations', function(rows){
+          webDB.execute('SELECT * FROM Installations', function(rows){
             if (rows.length) {
               Installation.loadAll(rows);
               callback();
@@ -76,7 +74,7 @@
     }); //execute select
   };//fetchAll
 
-  Installation.createTable(myTemp);
+  Installation.createTable();
   Installation.fetchAll(myTemp);
   module.Installation = Installation;
 })(window);
