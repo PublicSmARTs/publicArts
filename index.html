@@ -10,15 +10,23 @@
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
-    <script id="new-installation-template" type="text/x-handlebars-template">
-
-    </script>
     <script id="option-template" type="text/x-handlebars-template">
       <!-- template for filters for installation properties -->
       <option value="{{val}}">{{val}}</option>
     </script>
-    <script id="existing-installation-template" type="text/x-handlebars-template">
-      <!-- template to view existing installations -->
+    <script id="installation-template" type="text/x-handlebars-template">
+      <section>
+        <h3>Location:</h3>
+          <p>{{location}}</p>
+        <h3>Medium:</h3>
+          <p>{{medium}}</p>
+        <h3>Artist:</h3>
+          <p>{{artist}}</p>
+        <h3>Title:</h3>
+          <p>{{title}}</p>
+        <h3>Date Range:</h3>
+          <p>{{dateRange}}</p>
+      </section>
     </script>
   </head>
   <body>
@@ -59,7 +67,7 @@
         </header>
         <section>
           <h3>New Installation</h3>
-          <form class="new-form" action="#">
+          <form id="new-installation" class="new-form" action="#">
             <label>ADDRESS:
               <input type="text" id="installation-location" placeholder="INSTALLATION ADDRESS" required>
             </label>
@@ -87,7 +95,7 @@
             <!-- <label>RESOURCES:
               <input type="url" id="installation-image-url" placeholder="ADD URL TO IMAGE">
             </label> -->
-            <button type="submit" name="button">ADD NEW INSTALLATION</button>
+            <button type="submit" name="new-button">ADD NEW INSTALLATION</button>
           </form>
         </section>
       </section>
@@ -98,6 +106,9 @@
           <img src="/assets/heart.svg" class="header-art">
           <div class="thin-line"></div>
         </header>
+        <section id=display-installation>
+
+        </section>
         <img src="/assets/5-pins-pencils.svg">
       </section>
 

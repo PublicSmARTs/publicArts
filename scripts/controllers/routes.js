@@ -8,4 +8,6 @@ page('/shareart', shareController.reveal);
 
 page('/loveart', loveController.reveal);
 
+page('/loveart/:id', loveController.reveal);
+
 page();
