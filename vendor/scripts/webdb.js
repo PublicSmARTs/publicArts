@@ -15,7 +15,7 @@
       html5sql.putSelectResultsInArray = false;
       msg = 'html5sql verbosity off';
     }
-    console.log(msg);
+    //console.log(msg);
   };
 
   // Public interface method to set up the initial database connection:
@@ -26,10 +26,10 @@
         _config(isVerbose);
         html5sql.openDatabase('installation', 'Installation Database', 5*1024*1024);
       } else {
-        console.log('Web Databases not supported.');
+        //console.log('Web Databases not supported.');
       }
     } catch (e) {
-      console.error('Error occured during DB init. Web Database may not be supported.');
+      //console.error('Error occured during DB init. Web Database may not be supported.');
     }
   };
 
