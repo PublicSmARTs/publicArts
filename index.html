@@ -14,6 +14,22 @@
       <!-- template for filters for installation properties -->
       <option value="{{val}}">{{val}}</option>
     </script>
+    <!-- I want to refactor this and will return -->
+    <script id="option-medium-template" type="text/x-handlebars-template">
+      <option value="{{val}}">{{val}}</option>
+    </script>
+    <script id="option-artist-template" type="text/x-handlebars-template">
+      <option value="{{val}}">{{val}}</option>
+    </script>
+    <script id="option-title-template" type="text/x-handlebars-template">
+      <option value="{{val}}">{{val}}</option>
+    </script>
+    <script id="option-dateRange-template" type="text/x-handlebars-template">
+      <option value="{{val}}">{{val}}</option>
+    </script>
+    <script id="option-sanctioned-template" type="text/x-handlebars-template">
+      <option value="{{val}}">{{val}}</option>
+    </script>
     <script id="installation-template" type="text/x-handlebars-template">
       <section>
         <ul>
@@ -84,6 +100,41 @@
           <div class="thin-line"></div>
         </header>
         <div class="map-placeholder"></div>
+        <div><!-- search options zone -->
+          <section>
+            <ul id="filters" class="something">
+              <li>
+                <select id="medium-filter">
+                  <option value="">Choose Medium</option>
+                </select>
+              </li>
+              <li></li>
+              <li>
+                <select id="artist-filter">
+                  <option value="">Choose Artist</option>
+                </select>
+              </li>
+              <li></li>
+              <li>
+                <select id="title-filter">
+                  <option value="">Choose Title</option>
+                </select>
+              </li>
+                <li></li>
+                <li>
+                  <select id="dateRange-filter">
+                    <option value="">Choose Date Range</option>
+                  </select>
+                </li>
+                <li></li>
+                <li>
+                  <id="sanctioned-filter">
+                    <label>Choose Sanction Value</label>
+                    <option value=""></option>
+                  </select>
+                </li>
+                <li></li>
+        </div><!--search options -->
         <section class="image-block">
           <h2>FEATURED IN YOUR AREA</h2>
           <div class="popular-placeholder" class="clearfix">
@@ -208,6 +259,7 @@
       <!-- View files: -->
       <script src="/scripts/views/installationView.js"></script>
       <script src="/scripts/views/mapView.js"></script>
+      <script src="/scripts/views/searchView.js"></script>
       <!-- Controller files: -->
       <script src="/scripts/controllers/homeController.js"></script>
       <script src="/scripts/controllers/installationsController.js"></script>

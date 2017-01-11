@@ -13,8 +13,5 @@
     Installation.findWhere('medium', ctx.params.mediumName, mediumData);
   };
 
-
-
-
   module.installationsController = installationsController;
 })(window);
