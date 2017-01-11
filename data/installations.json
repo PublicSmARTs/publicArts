@@ -1,6 +1,6 @@
 [
   {
-    "location": "2nd Ave and Main St",
+    "location": "30 SW 10th St Portland Oregon",
     "medium": "sculpture",
     "artist": "Bob",
     "title": "Unknown",
@@ -12,7 +12,7 @@
     "comments": "This is my favorite sculpture."
   },
   {
-    "location": "3rd Ave and Holman St",
+    "location": "303 Holman St Portland Oregon",
     "medium": "mural",
     "artist": "Bob",
     "title": "Unknown",
@@ -24,13 +24,85 @@
     "comments": "This is the ugliest mural."
   },
   {
-    "location": "4th Ave and Pearl St",
+    "location": "400 Pearl St Portland Oregon",
+    "medium": "sculpture",
+    "artist": "Fred",
+    "title": "Unknown",
+    "dateRange": "1980-2000",
+    "sanctioned": true,
+    "description": "This is a sculpture of a porpoise.",
+    "imageUrl": "www.google.com",
+    "resources": "www.google.com",
+    "comments": "This is the best ever."
+  },
+  {
+    "location": "1339 NW Flanders St Portland Oregon",
+    "medium": "sculpture",
+    "artist": "Bob",
+    "title": "Unknown",
+    "dateRange": "1900-1920",
+    "sanctioned": true,
+    "description": "This is a sculpture of a shoe.",
+    "imageUrl": "www.google.com",
+    "resources": "www.google.com",
+    "comments": "This is my favorite sculpture."
+  },
+  {
+    "location": "928 SE 9th Ave Portland Oregon",
+    "medium": "mural",
+    "artist": "Bob",
+    "title": "Unknown",
+    "dateRange": "1920-1940",
+    "sanctioned": false,
+    "description": "This is a mural of a dog.",
+    "imageUrl": "www.google.com",
+    "resources": "www.google.com",
+    "comments": "This is the ugliest mural."
+  },
+  {
+    "location": "210 NW 11th Ave Portland Oregon",
     "medium": "sculpture",
     "artist": "Fred",
     "title": "Unknown",
     "dateRange": "1980-2000",
     "sanctioned": true,
     "description": "This is a sculpture of a mongoose.",
+    "imageUrl": "www.google.com",
+    "resources": "www.google.com",
+    "comments": "This is the best ever."
+  },
+  {
+    "location": "925 NW Flanders Portland Oregon",
+    "medium": "sculpture",
+    "artist": "Bob",
+    "title": "Unknown",
+    "dateRange": "1900-1920",
+    "sanctioned": true,
+    "description": "This is a sculpture of a calla lily.",
+    "imageUrl": "www.google.com",
+    "resources": "www.google.com",
+    "comments": "This is my favorite sculpture."
+  },
+  {
+    "location": "903 NW Davis Portland Oregon",
+    "medium": "mural",
+    "artist": "Bob",
+    "title": "Unknown",
+    "dateRange": "1920-1940",
+    "sanctioned": false,
+    "description": "This is a mural of a pickle.",
+    "imageUrl": "www.google.com",
+    "resources": "www.google.com",
+    "comments": "This is the ugliest mural."
+  },
+  {
+    "location": "122 NW 8th Ave Portland Oregon",
+    "medium": "sculpture",
+    "artist": "Fred",
+    "title": "Unknown",
+    "dateRange": "1980-2000",
+    "sanctioned": true,
+    "description": "This is a sculpture of a sloth.",
     "imageUrl": "www.google.com",
     "resources": "www.google.com",
     "comments": "This is the best ever."
