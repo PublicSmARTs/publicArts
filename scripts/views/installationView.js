@@ -14,6 +14,8 @@
 
 
   installationView.create = function() {
+    console.log($('#new-installation'));
+
     $('#new-installation').on('click', 'button', function(e){
       var formInstallation;
       //e.preventDefault();

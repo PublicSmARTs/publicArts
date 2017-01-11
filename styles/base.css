@@ -7,8 +7,12 @@ body {
   color: #404041;
 }
 
-h1, h2, h3, h4, h5, h6, .main-nav li, button, label {
+h1, h2, h3, h4, h5, h6, li, button, label {
   font-family: 'Noticia Text', serif;
+}
+
+.art-attr {
+  font-family: 'Quicksand', sans-serif;
 }
 
 h1 {
@@ -20,7 +24,7 @@ h2 {
   margin-top: 80px;
 }
 
-p, select{
+p, select span{
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -39,7 +43,6 @@ p {
 
 /*-----FORM STYLES-----*/
 #new-installation {
-  float: left;
   clear: both;
 }
 

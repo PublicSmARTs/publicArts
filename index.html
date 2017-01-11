@@ -16,20 +16,15 @@
     </script>
     <script id="installation-template" type="text/x-handlebars-template">
       <section>
-        <h3>Location:</h3>
-          <p>{{location}}</p>
-        <h3>Medium:</h3>
-          <p>{{medium}}</p>
-        <h3>Artist:</h3>
-          <p>{{artist}}</p>
-        <h3>Title:</h3>
-          <p>{{title}}</p>
-        <h3>Date Range:</h3>
-          <p>{{dateRange}}</p>
-        <h3>Sanctioned Status:</h3>
-          <p>{{sanctioned}}</p>
-        <h3>Desciption:</h3>
-          <p>{{description}}</p>
+        <ul>
+          <li>LOCATION:  <span class="art-attr">{{location}}</span></li>
+          <li>MEDIUM:  <span class="art-attr">{{medium}}</span></li>
+          <li>ARTIST:  <span class="art-attr">{{artist}}</span></li>
+          <li>TITLE:  <span class="art-attr">{{title}}</span></li>
+          <li>DATE RANGE:  <span class="art-attr">{{dateRange}}</span></li>
+          <li>SANCTIONED:  <span class="art-attr">{{sanctioned}}</span></li>
+          <li>DESCRIPTION:  <span class="art-attr">{{description}}</span></li>
+        </ul>
         <img src="{{imageUrl}}">
       </section>
     </script>
@@ -60,10 +55,11 @@
           <button type="button" name="shareart-button" class="button-style">Share Art</button>
         </div>
         <h2>POPULAR WORKS</h2>
-        <div class="popular-placeholder">
+        <div class="popular-placeholder" class="clearfix">
           <div class="popular-image"></div>
           <div class="popular-image"></div>
           <div class="popular-image"></div>
+          <div class="clearfix"></div>
         </div>
       </section>
 
@@ -142,8 +138,8 @@
             <!-- <label>RESOURCES:
               <input type="url" id="installation-image-url" placeholder="ADD URL TO IMAGE">
             </label> -->
+            <button type="submit" name="new-button" class="button-style">ADD NEW INSTALLATION</button>
           </form>
-          <button type="submit" name="new-button" class="button-style">ADD NEW INSTALLATION</button>
         </section>
       </section>
 

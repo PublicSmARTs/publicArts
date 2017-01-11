@@ -27,6 +27,23 @@
   text-align: justify;
 }
 
+.popular-placeholder {
+  width: 100%;
+}
+
 @media only screen and (min-width: 640px) {
+
+  .popular-placeholder {
+    width: 80%;
+    margin:0 auto;
+  }
+
+  .popular-image {
+    float:left;
+    height: 250px;
+    width: 250px;
+    background-color: lightgray;
+    margin: 3px;
+  }
 
 }
