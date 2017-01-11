@@ -40,7 +40,17 @@ p {
 
 
 /*-----LINK STYLES-----*/
+a, a:link, a:active {
+  text-decoration: none;
+  color: #404041;
+}
 
+a:hover, a:focus {
+  color: #F1623E;
+}
+
+a:visited {
+}
 
 /*-----FORM STYLES-----*/
 #new-installation {
