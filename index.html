@@ -16,67 +16,78 @@
     </script>
     <script id="installation-template" type="text/x-handlebars-template">
       <section>
-        <h3>Location:</h3>
-          <p>{{location}}</p>
-        <h3>Medium:</h3>
-          <p>{{medium}}</p>
-        <h3>Artist:</h3>
-          <p>{{artist}}</p>
-        <h3>Title:</h3>
-          <p>{{title}}</p>
-        <h3>Date Range:</h3>
-          <p>{{dateRange}}</p>
-        <h3>Sanctioned Status:</h3>
-          <p>{{sanctioned}}</p>
-        <h3>Desciption:</h3>
-          <p>{{description}}</p>
+        <ul>
+          <li>LOCATION:  <span class="art-attr">{{location}}</span></li>
+          <li>MEDIUM:  <span class="art-attr">{{medium}}</span></li>
+          <li>ARTIST:  <span class="art-attr">{{artist}}</span></li>
+          <li>TITLE:  <span class="art-attr">{{title}}</span></li>
+          <li>DATE RANGE:  <span class="art-attr">{{dateRange}}</span></li>
+          <li>SANCTIONED:  <span class="art-attr">{{sanctioned}}</span></li>
+          <li>DESCRIPTION:  <span class="art-attr">{{description}}</span></li>
+        </ul>
         <img src="{{imageUrl}}">
       </section>
     </script>
   </head>
   <body>
 
-    <header id="site-header">
-      <nav class="main-nav">
+    <header id="site-header" "clearfix">
+      <nav class="main-nav" class="clearfix">
         <img src="/assets/hamburger_icon.svg" class="hamburger-menu">
-        <img src="/assets/5-pins-plain.svg" class="pins-logo">
+        <!-- <img src="/assets/5-pins-plain.svg" class="pins-logo"> -->
         <img src="/assets/logo.svg" class="tab-logo">
         <ul>
           <li class="tab" data-content="home"><a href="/">HOME</a></li>
           <li class="tab" data-content="find-art"><a href="/findart">FIND ART</a></li>
           <li class="tab" data-content="share-art" ><a href="/shareart">SHARE ART</a></li>
         </ul>
+        <div class="thick-line" class="clearfix"></div>
       </nav>
-      <div class="thick-line"></div>
     </header>
 
     <main>
       <section id="home" class="tab-content">
-        <img src="/assets/logo.svg" class="main-logo">
-        <p>Basic about text goes here.</p>
+        <img src="https://images.pexels.com/photos/57809/pexels-photo-57809.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" class="home-image">
+        <div class="main-logo"><img src="/assets/logo.svg"></div>
+        <p class="parag">Feel free to fill this in if you're reading this. Basic about text goes here. More text and more text and more text. More text and more text and more text. More text and more text and more text. More text and more text and more text. More text and more text and more text. More text and more text and more text.</p>
+        <div id="home-buttons">
+          <button type="button" name="findart-button" class="button-style">Find Art</button>
+          <button type="button" name="shareart-button" class="button-style">Share Art</button>
+        </div>
+        <h2>POPULAR WORKS</h2>
+        <div class="popular-placeholder" class="clearfix">
+          <div class="popular-image"></div>
+          <div class="popular-image"></div>
+          <div class="popular-image"></div>
+          <div class="clearfix"></div>
+        </div>
       </section>
 
       <section id="findart" class="tab-content">
-        <header class="page-header">
+        <header class="page-header" class="clearfix">
           <h1 class="page-title">FIND ART</h1>
-          <img src="/assets/5-pins-plain.svg" class="pins-logo">
+          <img src="/assets/5-pins-plain.svg" class="header-art">
           <div class="thin-line"></div>
         </header>
+        <div class="map-placeholder"></div>
+        <h2>FEATURED IN YOUR AREA</h2>
       </section>
 
       <section id="shareart" class="tab-content">
-        <header class="page-header">
+        <div class="page-header">
           <h1 class="page-title">SHARE ART</h1>
           <img src="/assets/palette.svg" class="header-art">
           <div class="thin-line"></div>
-        </header>
+        </div>
         <section>
           <h3>New Installation</h3>
+          <div class="share-placeholder"></div>
           <form id="new-installation" class="new-form" action="#">
-            <label>ADDRESS:
+            <label class="thick">ADDRESS:
               <input type="text" id="installation-location" name="art-location" placeholder="INSTALLATION ADDRESS" required>
             </label>
-            <label>MEDIUM:
+            <br/>
+            <label class="thick">MEDIUM:
               <select id="installation-medium" name="art-medium" class="dropdown" required>
                 <option default class="select-default" value="">select medium</option>
                 <option value="ARCHITECTURE">ARCHITECTURE</option>
@@ -88,12 +99,15 @@
                 <option value="OTHER">OTHER</option>
               </select>
             </label>
+            <br/>
             <label>ARTIST:
               <input type="text" id="installation-artist" placeholder="ARTIST NAME IF KNOWN">
             </label>
+            <br/>
             <label>TITLE:
               <input type="text" id="installation-title" placeholder="TITLE OF INSTALLATION IF KNOWN">
             </label>
+            <br/>
             <label>DATE RANGE:
               <select id="installation-date-range" class="dropdown">
                 <option default class="select-default" value="">select date range</option>
@@ -106,22 +120,25 @@
                 <option value="before-1900">BEFORE 1900</option>
               </select>
             </label>
+            <br/>
             <label>SANCTIONED:
               <select id="installation-sanctioned" class="dropdown">
                 <option default class="select-default">select if sanctioned</option>
                 <option value="SANCTIONED">SANCTIONED</option>
                 <option value="UNSANCTIONED">UNSANCTIONED</option>
-            </label>
+              </label>
+            <br/>
             <label>DESCRIPTION:
               <input type="text" id="installation-description" placeholder="ADD DESCRIPTION OF INSTALLATION">
             </label>
+            <br/>
             <label>IMAGE URL:
               <input type="url" id="installation-image-url" placeholder="ADD URL TO IMAGE">
             </label>
             <!-- <label>RESOURCES:
               <input type="url" id="installation-image-url" placeholder="ADD URL TO IMAGE">
             </label> -->
-            <button type="submit" name="new-button">ADD NEW INSTALLATION</button>
+            <button type="submit" name="new-button" class="button-style">ADD NEW INSTALLATION</button>
           </form>
         </section>
       </section>
@@ -135,11 +152,12 @@
         <section id=display-installation>
 
         </section>
-        <img src="/assets/5-pins-pencils.svg">
+        <img src="/assets/5_pins_pencils.svg">
       </section>
 
       <footer>
-
+        <div class="thick-line" class="clearfix"></div>
+        <p>footer info goes here</p>
       </footer>
 
       <!-- Vendor files: -->

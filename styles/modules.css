@@ -1,40 +1,116 @@
+/*MAIN NAV*/
+.tab-logo {
+  width: 200px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
 .thick-line {
   background-color: #404041;
   width: 100%;
   height: 3px;
 }
 
-.thin-line {
-  background-color: #404041;
-  width: 100%;
-  height: 1.5px;
-}
-
-.hamburger_menu {
+.hamburger-menu {
+  display: block;
   float: right;
-  height: 100px;
-  width: 80px;
+  padding: 8px 20px 0 0;
+  height: 50px;
+  width: 40px;
 }
 
 .main-nav ul {
-  display: inline-block;;
+  display: none;
   list-style: none;
 }
 
+/*HOME PAGE*/
+.home-image {
+  width: 100%;
+  height: 400px;
+  opacity: .25;
+  position: relative;
+}
+
+div.main-logo {
+  display: inline;
+  width: 70%;
+  position: absolute;
+  bottom: 48%;
+  left: 15%;
+  margin: auto;
+}
+
+/*PAGE HEADING*/
+.page-header {
+  margin: 0 auto;
+}
+
+.page-title {
+  display: inline;
+  float: left;
+}
+
+.header-art {
+  margin: 0 auto;
+  width: 180px;
+  max-height: 50px;
+  padding-top: 17px;
+}
+
+.thin-line {
+  background-color: #404041;
+  width: 100%;
+  height: 2px;
+  clear: both;
+}
+/*PLACEHOLDERS*/
+.map-placeholder {
+  width: 100%;
+  height: 400px;
+  background-color: lightgray;
+}
+
+.share-placeholder {
+  height: 300px;
+  width: 300px;
+  background-color: lightgray;
+  /*float: right;*/
+  clear: both;
+}
+
+/*BUTTON*/
+.button-style {
+  width: 150px;
+  height: 50px;
+  clear: both;
+}
+
+select.select-default {
+  font-size: 1em;
+  color: lightgray;
+}
+
+
+
+
+
 @media only screen and (min-width: 640px) {
+  .hamburger-menu {
+    display: none;
+  }
+
   .main-nav ul {
-    padding: 0;
+    display: inline;
     list-style: none;
     clear: both;
+    float: right
   }
 
   .main-nav li {
     margin-right: .4em;
     font: 1em;
-    padding: .5em .2em;
-  }
-
-  .hamburger_menu {
-    display: none;
+    padding: 10px 40px 0 0;
+    display: inline-block;
   }
 }

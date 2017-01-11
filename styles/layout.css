@@ -1,9 +1,9 @@
-.pull-left {
-  float: left;
-}
-
-.pull-right {
-  float: right;
+.test {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    float: right;
 }
 
 .clearfix::after {
@@ -12,6 +12,38 @@
   clear: both;
 }
 
+#site-header {
+  height: 68px;
+}
+
+.page-header {
+  display: inline;
+  margin: 0 auto;
+}
+
+.parag {
+  width: 80%;
+  margin: 40px auto;
+  text-align: justify;
+}
+
+.popular-placeholder {
+  width: 100%;
+}
+
 @media only screen and (min-width: 640px) {
+
+  .popular-placeholder {
+    width: 80%;
+    margin:0 auto;
+  }
+
+  .popular-image {
+    float:left;
+    height: 250px;
+    width: 250px;
+    background-color: lightgray;
+    margin: 3px;
+  }
 
 }
