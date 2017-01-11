@@ -5,6 +5,7 @@ img {
 body {
   font-size: 100%;
   color: #404041;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6, li, button, label {
@@ -69,6 +70,7 @@ input, select {
 }
 
 footer {
+  margin-top: 40px;
   height: 70px;
   text-align: center;
 }

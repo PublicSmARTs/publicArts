@@ -80,9 +80,16 @@ div.main-logo {
 }
 
 /*BUTTON*/
+#home-buttons {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .button-style {
+  display: block;
   width: 150px;
   height: 50px;
+  margin: 0 auto;
   clear: both;
 }
 
@@ -91,7 +98,10 @@ select.select-default {
   color: lightgray;
 }
 
-
+.footer-art {
+  width: 280px;
+  margin: 0 auto;
+}
 
 
 
@@ -112,5 +122,18 @@ select.select-default {
     font: 1em;
     padding: 10px 40px 0 0;
     display: inline-block;
+  }
+
+  #home-buttons {
+    width: 310px;
+    margin: 0 auto;
+  }
+
+  .button-style {
+    display: inline;
+    width: 150px;
+    height: 50px;
+    margin: 0 auto;
+    clear: both;
   }
 }
