@@ -74,6 +74,18 @@
     }); //execute select
   };//fetchAll
 
+
+  Installation.findWhere = function(field, value, callback) {
+    console.log('findWhere');
+    webDB.execute(
+      {
+        sql: 'SELECT * FROM installation WHERE ' + FIELD + ' = ?; ',
+        data: [value]
+      },
+    callback
+  );
+  };
+
   Installation.createTable();
   Installation.fetchAll(myTemp);
   module.Installation = Installation;

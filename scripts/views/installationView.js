@@ -23,11 +23,11 @@
         artist: $('#installation-artist').val() || 'UNKNOWN',
         title: $('#installation-title').val() || 'UNKNOWN',
         dateRange: $('#installation-date-range').val() || 'UNKNOWN',
-        // sanctioned: $('#installation-sanctioned')
-        // description: $('#installation-description')
-        // imageUrl: $('#installation-image-url')
+        sanctioned: $('#installation-sanctioned').val(),
+        description: $('#installation-description').val(),
+        imageUrl: $('#installation-image-url').val()
       });
-      //formInstallation.insertRecord();
+      formInstallation.insertRecord();
       e.delegateTarget.reset();
       //redirect here --TEMP SOLUTION
       loveController.reveal();
