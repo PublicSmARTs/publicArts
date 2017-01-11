@@ -26,6 +26,11 @@
           <p>{{title}}</p>
         <h3>Date Range:</h3>
           <p>{{dateRange}}</p>
+        <h3>Sanctioned Status:</h3>
+          <p>{{sanctioned}}</p>
+        <h3>Desciption:</h3>
+          <p>{{description}}</p>
+        <img src="{{imageUrl}}">
       </section>
     </script>
   </head>
@@ -69,10 +74,19 @@
           <h3>New Installation</h3>
           <form id="new-installation" class="new-form" action="#">
             <label>ADDRESS:
-              <input type="text" id="installation-location" placeholder="INSTALLATION ADDRESS" required>
+              <input type="text" id="installation-location" name="art-location" placeholder="INSTALLATION ADDRESS" required>
             </label>
             <label>MEDIUM:
-              <input type="text" id="installation-medium" placeholder="NEED TO MAKE DROP DOWN MENU" required>
+              <select id="installation-medium" name="art-medium" class="dropdown" required>
+                <option default class="select-default" value="">select medium</option>
+                <option value="ARCHITECTURE">ARCHITECTURE</option>
+                <option value="SCULPTURE">SCULPTURE</option>
+                <option value="MURAL">MURAL</option>
+                <option value="PAINTING">PAINTING</option>
+                <option value="EARTHWORK">EARTHWORK</option>
+                <option value="STREET-ART">STREET ART</option>
+                <option value="OTHER">OTHER</option>
+              </select>
             </label>
             <label>ARTIST:
               <input type="text" id="installation-artist" placeholder="ARTIST NAME IF KNOWN">
@@ -81,10 +95,22 @@
               <input type="text" id="installation-title" placeholder="TITLE OF INSTALLATION IF KNOWN">
             </label>
             <label>DATE RANGE:
-              <input type="text" id="installation-date-range" placeholder="NEED TO MAKE DROP DOWN MENU">
+              <select id="installation-date-range" class="dropdown">
+                <option default class="select-default" value="">select date range</option>
+                <option value="after-2000">AFTER 2000</option>
+                <option value="1980-2000">1980-2000</option>
+                <option value="1960-1980">1960-1980</option>
+                <option value="1940-1960">1940-1960</option>
+                <option value="1920-1940">1920-1940</option>
+                <option value="1900-1920">1900-1920</option>
+                <option value="before-1900">BEFORE 1900</option>
+              </select>
             </label>
             <label>SANCTIONED:
-              <input type="checkbox" id="installation-sanctioned">
+              <select id="installation-sanctioned" class="dropdown">
+                <option default class="select-default">select if sanctioned</option>
+                <option value="SANCTIONED">SANCTIONED</option>
+                <option value="UNSANCTIONED">UNSANCTIONED</option>
             </label>
             <label>DESCRIPTION:
               <input type="text" id="installation-description" placeholder="ADD DESCRIPTION OF INSTALLATION">
