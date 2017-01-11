@@ -16,23 +16,32 @@
   installationView.create = function() {
     $('#new-installation').on('click', 'button', function(e){
       var formInstallation;
-      e.preventDefault();
-      formInstallation = new Installation({
-        location: $('#installation-location').val(),
-        medium: $('#installation-medium').val(),
-        artist: $('#installation-artist').val() || 'UNKNOWN',
-        title: $('#installation-title').val() || 'UNKNOWN',
-        dateRange: $('#installation-date-range').val() || 'UNKNOWN',
-        // sanctioned: $('#installation-sanctioned')
-        // description: $('#installation-description')
-        // imageUrl: $('#installation-image-url')
-      });
-      //formInstallation.insertRecord();
-      e.delegateTarget.reset();
-      //redirect here --TEMP SOLUTION
-      loveController.reveal();
-      $('#display-installation').empty();
-      $('#display-installation').append(render(formInstallation));
+      //e.preventDefault();
+      //e.delegateTarget.checkValidity();
+      console.dir(e);
+
+      var resultLocation = e.delegateTarget['art-location'].checkValidity();
+      var resultMedium = e.delegateTarget['art-medium'].checkValidity();
+
+      if(resultLocation === true && resultMedium === true) {
+        formInstallation = new Installation({
+          location: $('#installation-location').val(),
+          medium: $('#installation-medium').val(),
+          artist: $('#installation-artist').val().toUpperCase() || 'UNKNOWN',
+          title: $('#installation-title').val().toUpperCase() || 'UNKNOWN',
+          dateRange: $('#installation-date-range').val() || 'UNKNOWN',
+          sanctioned: $('#installation-sanctioned').val() || 'UNKNOWN',
+          description: $('#installation-description').val() || 'UNKNOWN',
+          imageUrl: $('#installation-image-url').val() || 'UNKNOWN'
+        });
+        //formInstallation.insertRecord();
+        console.log(formInstallation);
+        e.delegateTarget.reset();
+        //redirect here --TEMP SOLUTION
+        loveController.reveal();
+        $('#display-installation').empty();
+        $('#display-installation').append(render(formInstallation));
+      };
     });
   };
 
