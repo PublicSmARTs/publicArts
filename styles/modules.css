@@ -53,6 +53,16 @@ div.main-logo {
   margin: 0 auto;
 }
 
+#shareart-header {
+  width: 270px;
+  margin: 0 auto;
+}
+
+#loveart-header {
+  width: 230px;
+  margin: 0 auto;
+}
+
 .page-title {
   float: left;
   display: inline;
@@ -64,6 +74,16 @@ div.main-logo {
   width: 180px;
   max-height: 50px;
   padding-top: 17px;
+}
+
+#shareart .header-art {
+  width: 80px;
+  padding-left: 15px;
+}
+
+#loveart .header-art {
+  width: 80px;
+  padding-left: 10px;
 }
 
 .thin-line {
