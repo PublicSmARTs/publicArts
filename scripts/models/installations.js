@@ -17,6 +17,8 @@
       'CREATE TABLE IF NOT EXISTS Installations (' +
         'id INTEGER PRIMARY KEY, ' +
         'location VARCHAR(100), ' +
+        'lat FLOAT(10,6), ' +
+        'lng FLOAT(10,6), ' +
         'medium VARCHAR(20) NOT NULL, ' +
         'title VARCHAR(50) NOT NULL, ' +
         'artist VARCHAR(50) NOT NULL, ' +
@@ -24,7 +26,7 @@
         'imageUrl VARCHAR(255), ' +
         'dateRange VARCHAR(10), ' +
         'sanctioned BOOLEAN, ' +
-        'description TEXT, ',
+        'description TEXT, ' +
         'comments VARCHAR(255) );',
       callback
     );
@@ -34,8 +36,8 @@
     webDB.execute(
       [
         {
-          'sql': 'INSERT INTO Installations (location, medium, title, artist, artistUrl, imageUrl, dateRange, sanctioned, description) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);',
-          'data': [this.location, this.medium, this.title, this.artist, this.artistUrl, this.imageUrl, this.dateRange, this.sanctioned, this.description],
+          'sql': 'INSERT INTO Installations (location, lat, lng, medium, title, artist, artistUrl, imageUrl, dateRange, sanctioned, description, comments) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);',
+          'data': [this.location, this.lat, this.lng, this.medium, this.title, this.artist, this.artistUrl, this.imageUrl, this.dateRange, this.sanctioned, this.description, this.comments],
         }
       ],
       callback

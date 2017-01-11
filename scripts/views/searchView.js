@@ -2,7 +2,7 @@
 (function(module){
 
   var searchView = {};
-  
+
   searchView.populateFilters = function(){
     var template = Handlebars.compile($('#option-template').text());
 
