@@ -37,7 +37,7 @@
   };
   artMap.render = function (){
     var clientCoords = artMap.locateCLient;
-    artMapOptions.center = new google.maps.LatLng(clientCoords[o],clientCoords[1]);
+    artMapOptions.center = new google.maps.LatLng(clientCoords[0],clientCoords[1]);
 
     initMap(artMapOptions);
   };
@@ -51,7 +51,7 @@
 
     var clientCoords = artMap.locateCLient;
     map = new google.maps.Map($('.map-placeholder'),{  // maye add an ID and use $('#map') ??
-      center: {clientCoords[o],clientCoords[1]}, // The linter is throwing an error on this line, when I changed "center:{lat = 45.5315, lng = -122.6668}" to refference vars instead, thusly : "center = {lat, lng}" I dont see the difference and the script still works the same.
+      center: {clientCoords[0],clientCoords[1]}, // The linter is throwing an error on this line, when I changed "center:{lat = 45.5315, lng = -122.6668}" to refference vars instead, thusly : "center = {lat, lng}" I dont see the difference and the script still works the same.
       zoom: 8
     }));
   };
