@@ -24,7 +24,8 @@
         'imageUrl VARCHAR(255), ' +
         'dateRange VARCHAR(10), ' +
         'sanctioned BOOLEAN, ' +
-        'description TEXT );',
+        'description TEXT, ',
+        'comments VARCHAR(255) );',
       callback
     );
   };
@@ -74,7 +75,39 @@
     }); //execute select
   };//fetchAll
 
-  Installation.createTable();
+
+  Installation.allMediums = function(callback) {
+    webDB.execute('SELECT DISTINCT medium FROM Installations', callback);
+  };
+
+  Installation.allArtists = function(callback) {
+    webDB.execute('SELECT DISTINCT artist FROM Installations', callback);
+  };
+
+  Installation.allTitles = function(callback) {
+    webDB.execute('SELECT DISTINCT title FROM Installations', callback);
+  };
+
+  Installation.allDateRanges = function(callback) {
+    webDB.execute('SELECT DISTINCT dateRange FROM Installations', callback);
+  };
+
+  Installation.allBySanction = function(callback) {
+    webDB.execute('SELECT DISTINCT sanctioned FROM Installations', callback);
+  };
+
+  Installation.findWhere = function(field, value, callback) {
+    webDB.execute(
+      {
+        sql: 'SELECT * FROM installation WHERE ' + field + ' = ?; ',
+        data: [value]
+      },
+    callback
+    );
+  };
+
+  Installation.createTable(myTemp);
   Installation.fetchAll(myTemp);
   module.Installation = Installation;
+
 })(window);
