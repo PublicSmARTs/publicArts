@@ -13,6 +13,20 @@
   };
 
 
+  $('#home-buttons').on('click', 'button', function() {
+    console.log('clicked');
+    var page = $(this).val();
+    console.log(page);
+    if (page = 'shareart') {
+      console.log('here');
+      shareController.reveal();
+    };
+    if (page = 'findart') {
+      findController.reveal();
+    };
+  });
+
+
   installationView.create = function() {
     console.log($('#new-installation'));
 
@@ -51,3 +65,4 @@
 })(window);
 
 installationView.create();
+console.log('log', $('#home-buttons button').val());
