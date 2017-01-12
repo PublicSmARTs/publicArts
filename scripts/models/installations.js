@@ -13,6 +13,7 @@
   Installation.all = [];
 
   Installation.createTable = function(callback) {
+    console.log('in createTable');
     webDB.execute(
       'CREATE TABLE IF NOT EXISTS Installations (' +
         'id INTEGER PRIMARY KEY, ' +

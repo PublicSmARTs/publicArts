@@ -131,13 +131,23 @@
                 </li>
                 <li></li>
                 <li>
-                  <id="sanctioned-filter">
-                    <label>Choose Sanction Value</label>
-                    <option value=""></option>
+                  <select id="sanctioned-filter">
+                    <option value="">Choose Sanction Value</option>
+                    <option value="true">SANCTIONED</option>
+                    <option value="false">UNSANCTIONED</option>
                   </select>
                 </li>
                 <li></li>
-        </div><!--search options -->
+                <li>
+                  <input type="checkbox" name="has-title" value="true" />Has Title
+                </li>
+                <li>
+                  <input type="checkbox" name="has-image" value="true" />Has Photo
+                </li>
+                <li></li>
+                <li><input type="checkbox" name="has-description" value="true" />Has description
+                </li>
+              </div><!--search options -->
         <section class="image-block">
           <h2>FEATURED IN YOUR AREA</h2>
           <div class="popular-placeholder" class="clearfix">

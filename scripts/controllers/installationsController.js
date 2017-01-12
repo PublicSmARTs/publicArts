@@ -5,7 +5,6 @@
 
   //load by all filters
   installationsController.loadByMedium = function(ctx, next) {
-    console.log('installationsController');
     var mediumData = function(installationsInMedium) {
       ctx.installation = installationsInMedium;
       next();

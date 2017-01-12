@@ -33,14 +33,6 @@
       );//if
     }); //installation.allTitles
 
-    Installation.allBySanction(function(rows) {
-      if ($('#sanctioned-filter').append(rows.map(function(row){
-        return template({val: row.sanctioned});
-      }))
-    );//if
-    }); //installation.allBySanction
-
-//////
 
   };//populateFilters
 
