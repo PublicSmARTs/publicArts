@@ -6,5 +6,5 @@
 
   function renderNewInstallationMap(){};
 
-  module.mapView = artMap;
+  module.mapView = mapView;
 })(window);

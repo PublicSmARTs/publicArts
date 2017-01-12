@@ -1,2 +1,3 @@
 'use strict';
-var apiKey = AIzaSyD8s0nkbT7L7dy-Xt12EyGpfUq68lz5q3w;
+var apiKey = 'AIzaSyAWLK7zwl3GRbE1VqeFD3bA7EmwFxFLyks';
+            

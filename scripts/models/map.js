@@ -1,5 +1,5 @@
 'use strict';
-(function(module) {
+// (function(module) {
   var artMap = {}; //abject to attach methods
   var artMapOptions = { // object to contain rlevant map options data
     center : new google.maps.LatLng(cntLat,cntrLng),
@@ -50,11 +50,13 @@
   initMap = function(mapConfig){
 
     var clientCoords = artMap.locateCLient;
+    console.log(clientCoords);
+    var
     map = new google.maps.Map($('.map-placeholder'),{  // maye add an ID and use $('#map') ??
       center: {clientCoords[0],clientCoords[1]}, // The linter is throwing an error on this line, when I changed "center:{lat = 45.5315, lng = -122.6668}" to refference vars instead, thusly : "center = {lat, lng}" I dont see the difference and the script still works the same.
       zoom: 8
     }));
   };
 
-  module.artMap = artMap;
-})(window);
+//   module.artMap = artMap;
+// })(window);
