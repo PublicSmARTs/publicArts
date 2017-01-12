@@ -203,6 +203,8 @@
               <input id="submit-2" type="button" id="installation-location" name="art-location" value="SEARCH" class="button-style" required>
             </div>
             <input type="hidden" id="hidden-location" name="hidden-input" value="">
+            <input type="hidden" id="hidden-lat" name="hidden-input" value="">
+            <input type="hidden" id="hidden-lng" name="hidden-input" value="">
             <div class="required-field">
               <br/>
               <label class="thick">MEDIUM:
@@ -242,7 +244,7 @@
             <br/>
             <label>SANCTIONED:
               <select id="installation-sanctioned" class="dropdown">
-                <option default class="select-default">SELECT IF SANCTIONED</option>
+                <option default class="select-default" val="">SELECT IF SANCTIONED</option>
                 <option value="SANCTIONED">SANCTIONED</option>
                 <option value="UNSANCTIONED">UNSANCTIONED</option>
               </select>
