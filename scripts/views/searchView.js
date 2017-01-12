@@ -3,6 +3,7 @@
 
   var searchView = {};
 
+
   searchView.populateFilters = function(){
     var template = Handlebars.compile($('#option-template').text());
 
@@ -32,18 +33,17 @@
       }))//append rows
       );//if
     }); //installation.allTitles
-
-    Installation.allBySanction(function(rows) {
-      if ($('#sanctioned-filter').append(rows.map(function(row){
-        return template({val: row.sanctioned});
-      }))
-    );//if
-    }); //installation.allBySanction
-
-//////
-
   };//populateFilters
 
+  searchView.handleFilters = function() {
+    $('#filters').one('change', 'select', function() {
+      var resource = this.id.replace('-filter', '');
+      page('/' + resource + '/' + $(this).val().replace(/\W+/g, '+')); // Replace any/all whitespace with a +
+    });
+  };
+
+
   searchView.populateFilters();
+  //searchView.handleFilters();
   module.searchView = searchView;
 })(window);

@@ -1,6 +1,7 @@
 'use strict';
 (function(module) {
 
+  Installation.createTable();
   var installationsController = {};
 
   installationsController.index = function(ctx, next) {
@@ -14,7 +15,8 @@
       ctx.installation = installationsInMedium;
       next();
     };
-    Installation.findWhere('medium', ctx.params.mediumName, mediumData);
+    Installation.findWhere('medium', ctx.params.mediumName.replace('+', ' '), mediumData);
+      console.log('mediumData ', mediumData);
   };
 
   //MOCK MIDDLEWARE TO BE DELETED
@@ -34,4 +36,5 @@
   };
 
   module.installationsController = installationsController;
+
 })(window);

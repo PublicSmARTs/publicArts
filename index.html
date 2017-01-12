@@ -102,41 +102,48 @@
           </div>
           <div class="thin-line"></div>
         </header>
-        <div class="map-placeholder"></div>
+        <div id="findMap" class="map-placeholder"></div>
         <div><!-- search options zone -->
           <section>
-            <ul id="filters" class="something">
+            <ul id="filters">
               <li>
-                <select id="medium-filter">
+                <select id="medium-filter"  class="dropdown">
                   <option value="">Choose Medium</option>
                 </select>
               </li>
               <li></li>
               <li>
-                <select id="artist-filter">
+                <select id="artist-filter"  class="dropdown">
                   <option value="">Choose Artist</option>
                 </select>
               </li>
               <li></li>
               <li>
-                <select id="title-filter">
+                <select id="title-filter"  class="dropdown">
                   <option value="">Choose Title</option>
                 </select>
               </li>
                 <li></li>
                 <li>
-                  <select id="dateRange-filter">
+                  <select id="dateRange-filter"  class="dropdown">
                     <option value="">Choose Date Range</option>
                   </select>
                 </li>
                 <li></li>
                 <li>
-                  <id="sanctioned-filter">
-                    <label>Choose Sanction Value</label>
-                    <option value=""></option>
+                  <select id="sanctioned-filter"  class="dropdown">
+                    <option value="">Choose Sanction Value</option>
+                    <option value="SANCTIONED">SANCTIONED</option>
+                    <option value="UNSANCTIONED">UNSANCTIONED</option>
                   </select>
                 </li>
                 <li></li>
+                <li>
+                  <input type="checkbox" name="has-image" value="true" />Has Photo
+                </li>
+                <li></li>
+                <li><input type="checkbox" name="has-description" value="true" />Has description
+                </li>
         </div><!--search options -->
         <section class="image-block">
           <h2>FEATURED IN YOUR AREA</h2>
@@ -172,7 +179,7 @@
         </header>
         <section>
           <h3>New Installation</h3>
-          <div class="share-placeholder"></div>
+          <div id= "shareMap" class="share-placeholder"></div>
           <form id="new-installation" class="new-form" action="#">
             <div class="required-field">
               <label class="thick">ADDRESS:
@@ -253,9 +260,14 @@
         <div class="thick-line" class="clearfix"></div>
         <p>footer info goes here</p>
       </footer>
+      <!-- API key* .gitignore -->
+      <script src="/appApiKey.js"></script>
       <!-- API calls -->
+
       <!-- <script src="https://maps.googleapis.com/maps/api/js?key=apiKey&libraries=places&callback=initMap" -->
       <!-- async defer></script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
       <!-- Vendor files: -->
       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
