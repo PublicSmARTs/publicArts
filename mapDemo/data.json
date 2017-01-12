@@ -1,0 +1,14 @@
+[
+  {
+    "name" : "Portland",
+    "lat"  : "45.5231",
+    "lng" : "122.6765",
+    "associated" : "data"
+  },
+  {
+    "name" : "Beaverton",
+    "lat"  : "45.4871",
+    "lng" : "122.8037",
+    "associated" : "MOREdata"
+  }
+]
