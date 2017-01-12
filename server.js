@@ -17,6 +17,7 @@ function proxyGoogle(request, response) {
 ))(request, response);
 };
 
+
 app.get('*', function(request, response) {
   console.log('New request:', request.url);
   response.sendFile('index.html', { root: '.' });
