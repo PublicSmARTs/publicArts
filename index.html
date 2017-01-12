@@ -104,6 +104,11 @@
           </div>
           <div class="thin-line"></div>
         </header>
+        <div id="floating-panel">
+              <input id="ac" type="text" value="enter an address">
+              <input id="submit" type="button" value="place pin">
+
+              </div>
         <div id="findMap"></div>
         <div><!-- search options zone -->
           <h2>FILTER BY:</h2>
@@ -185,7 +190,12 @@
           <div class="thin-line"></div>
         </header>
         <section>
+<<<<<<< HEAD
+          <h3>New Installation</h3>
+          <div id="artMap" class="share-placeholder"></div>
+=======
           <div id= "shareMap" class="share-placeholder"></div>
+>>>>>>> master
           <form id="new-installation" class="new-form" action="#">
             <div class="required-field">
               <label class="thick">ADDRESS:
@@ -272,12 +282,10 @@
         <p>&copy; 2016 SMART ARTS!!</p>
       </footer>
       <!-- API key* .gitignore -->
-      <script src="/appApiKey.js"></script>
+      <!-- <script src="/appApiKey.js"></script> -->
       <!-- API calls -->
-      <!-- <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false">
-      </script> -->
-      <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyAWLK7zwl3GRbE1VqeFD3bA7EmwFxFLyks&sensor=false"></script>
-      <!-- Vendor files: -->
+      <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyAWLK7zwl3GRbE1VqeFD3bA7EmwFxFLyks&libraries=places"></script>
+    <!-- Vendor files: -->
       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
       <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js"></script> -->
@@ -287,7 +295,8 @@
 
       <!-- Model files: -->
       <script src="/scripts/models/installations.js"></script>
-      <script src="/scripts/models/map.js"></script>
+      <script src="/scripts/models/findMap.js"></script>
+      <script src="/scripts/models/artMap.js"></script>
       <!-- View files: -->
       <script src="/scripts/views/installationView.js"></script>
       <script src="/scripts/views/mapView.js"></script>
