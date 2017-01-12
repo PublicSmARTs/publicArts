@@ -17,11 +17,9 @@
     console.log('clicked');
     var page = $(this).val();
     console.log(page);
-    if (page = 'shareart') {
-      console.log('here');
+    if (page === 'shareart') {
       shareController.reveal();
-    };
-    if (page = 'findart') {
+    } else if (page === 'findart') {
       findController.reveal();
     };
   });
@@ -48,7 +46,7 @@
           dateRange: $('#installation-date-range').val() || 'UNKNOWN',
           sanctioned: $('#installation-sanctioned').val() || 'UNKNOWN',
           description: $('#installation-description').val() || 'UNKNOWN',
-          imageUrl: $('#installation-image-url').val() || 'UNKNOWN'
+          imageUrl: $('#installation-image-url').val()
         });
         //formInstallation.insertRecord();
         console.log(formInstallation);

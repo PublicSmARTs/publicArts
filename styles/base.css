@@ -29,8 +29,51 @@ p, select span{
   font-family: 'Quicksand', sans-serif;
 }
 
+::-webkit-input-placeholder {
+   color: gray;
+   font-family: 'Quicksand', sans-serif;
+   font-weight: light;
+   font-size: 80%;
+}
+
+:-moz-placeholder {
+   color: gray;
+   font-family: 'Quicksand', sans-serif;
+   font-weight: light;
+   font-size: 80%;
+ }
+
+::-moz-placeholder {
+   color: gray;
+   font-family: 'Quicksand', sans-serif;
+   font-weight: light;
+   font-size: 80%;
+ }
+
+:-ms-input-placeholder {
+   color: gray;
+   font-family: 'Quicksand', sans-serif;
+   font-weight: light;
+   font-size: 80%;
+ }
+
+ select {
+     -webkit-padding-end: 20px;
+     -moz-padding-end: 20px;
+     -webkit-padding-start: 2px;
+     -moz-padding-start: 2px;
+     color: gray;
+     font-family: 'Quicksand', sans-serif;
+     font-weight: light;
+     font-size: 80%;
+ }
+
 main {
   margin: auto;
+}
+
+li {
+  list-style: none;
 }
 
 /*-----TEXT STYLES-----*/
@@ -54,33 +97,49 @@ a:visited {
 
 /*-----FORM STYLES-----*/
 #new-installation {
+  width: 340px;
+  margin: 0 auto;
   clear: both;
 }
 
 label {
   display: list-item;
   list-style: none;
-  text-align: right;
-  margin-right: 0 50px;
-  padding: 0px;
-  width: 550px;
+  text-align: left;
+  margin-right: 20px;
+  width: 220px;
   clear: both;
 }
 
 label.thick {
   font-weight: bold;
-  font-size: 1.2em;
 }
 
 input, select {
-  width: 400px;
+  width: 330px;
   border: 1px solid #ccc;
   border-width: 0 0 1px 0;
   border-radius: 0;
+  margin-top: 5px;
 }
 
 footer {
   margin-top: 40px;
   height: 70px;
   text-align: center;
+}
+
+@media only screen and (min-width: 640px) {
+  #new-installation {
+    width: 600px;
+  }
+  
+  label {
+    text-align: right;
+    margin-right: 20px;
+    width: 550px;
+  }
+  input, select {
+    width: 400px;
+  }
 }
