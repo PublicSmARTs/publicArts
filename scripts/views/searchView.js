@@ -35,14 +35,6 @@
     }); //installation.allTitles
   };//populateFilters
 
-  searchView.handleFilters = function() {
-    $('#filters').one('change', 'select', function() {
-      var resource = this.id.replace('-filter', '');
-      page('/' + resource + '/' + $(this).val().replace(/\W+/g, '+')); // Replace any/all whitespace with a +
-    });
-  };
-
-
   searchView.populateFilters();
   //searchView.handleFilters();
   module.searchView = searchView;
