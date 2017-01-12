@@ -110,6 +110,14 @@
   width: 225px;
 }
 
+.input-checkbox{
+  width: 30px;
+}
+
+li.check {
+  margin-top: 5px;
+}
+
 @media only screen and (min-width: 640px) {
 
   .image {

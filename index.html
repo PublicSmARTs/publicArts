@@ -115,32 +115,33 @@
         <div id="search-bar"></div>
         <div><!-- search options zone -->
           <h2>FILTER BY:</h2>
-          <section>
+          <section id="filter-search">
             <ul id="filters">
+              <li>MEDIUM:</li>
               <li>
                 <select id="medium-filter"  class="dropdown">
                   <option value="">CHOOSE MEDIUM</option>
                 </select>
               </li>
-              <li></li>
+              <li>ARTIST:</li>
               <li>
                 <select id="artist-filter"  class="dropdown">
                   <option value="">CHOOSE ARTIST</option>
                 </select>
               </li>
-              <li></li>
+              <li>TITLE:</li>
               <li>
                 <select id="title-filter"  class="dropdown">
                   <option value="">CHOOSE TITLE</option>
                 </select>
               </li>
-                <li></li>
+                <li>DATE RANGE:</li>
                 <li>
                   <select id="dateRange-filter"  class="dropdown">
                     <option value="">CHOOSE DATE RANGE</option>
                   </select>
                 </li>
-                <li></li>
+                <li>IF SANCTIONED:</li>
                 <li>
                   <select id="sanctioned-filter"  class="dropdown">
                     <option value="">CHOOSE SANCTION VALUE</option>
@@ -149,14 +150,14 @@
                   </select>
                 </li>
                 <li></li>
-                <li>
-                  <input type="checkbox" name="has-title" value="true" />HAS TITLE
+                <li class="check">
+                  <input class="input-checkbox" type="checkbox" name="has-title" value="true" />HAS TITLE
                 </li>
-                <li>
-                  <input type="checkbox" name="has-image" value="true" />HAS PHOTO
+                <li class="check">
+                  <input class="input-checkbox" type="checkbox" name="has-image" value="true" />HAS PHOTO
                 </li>
-                <li></li>
-                <li><input type="checkbox" name="has-description" value="true" />HAS DESCRIPTION
+                <li class="check">
+                  <input class="input-checkbox" type="checkbox" name="has-description" value="true" />HAS DESCRIPTION
                 </li>
               </div><!--search options -->
 
