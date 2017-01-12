@@ -62,6 +62,7 @@ function add_autoComplete(map){
 
     });
     $('#hidden-location').val(place.formatted_address);
+      console.log(place);
   });
 
 }

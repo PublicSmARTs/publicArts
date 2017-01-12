@@ -14,6 +14,18 @@ findMap.getLocation = function() {
     return here;
 }
 
+findMap.installationsToCoords = function(arrayOFPLaces){
+var coordsArray = [];
+  coordsArray.push(arrayOFPLaces.forEach(getLatLng(place)));
+  return coordsArray;
+}
+
+findMap.getLatLng = function(place){
+  var coordinatPair= [place.lat, place.lng];
+  return coordinatPair;
+}
+
+
 
 findMap.initMap = function(position) { //creates map
   var lat = 1;
