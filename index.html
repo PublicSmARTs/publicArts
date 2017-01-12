@@ -196,10 +196,13 @@
         <section>
           <div id="artMap" class="share-placeholder"></div>
           <form id="new-installation" class="new-form" action="#">
-            <div class="required-field">
-              <label class="thick">ADDRESS:
-                <input type="text" id="installation-location" name="art-location" placeholder="INSTALLATION ADDRESS" required>
+            <div id="floating-panel-2">
+              <label class="thick">YOUR LOCATION:
+                <input id="ac-2" type="text" placeholder="ENTER AN ADDRESS">
               </label>
+              <input id="submit-2" type="button" id="installation-location" name="art-location" value="SEARCH" class="button-style" required>
+            </div>
+            <div class="required-field">
               <br/>
               <label class="thick">MEDIUM:
                 <select id="installation-medium" name="art-medium" class="dropdown" required>

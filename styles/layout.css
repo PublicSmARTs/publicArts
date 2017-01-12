@@ -92,21 +92,25 @@
 }
 /* Optional: Makes the sample page fill the window. */
 
-#floating-panel {
-   text-align: center;
+#floating-panel, #floating-panel-2 {
    font-family: 'Quicksand','sans-serif';
-   padding-left: 10px;
+   z-index: 5;
 }
 
 #floating-panel {
- position: absolute;
- top: 550px;
- width: 100%;
- z-index: 5;
- padding: 5px;
+  padding-left: 10px;
+  text-align: center;
+  position: absolute;
+  top: 550px;
+  width: 100%;
+  padding: 5px;
 }
 
-#ac {
+#floating-panel-2 {
+
+}
+
+#ac, #ac-2{
   width: 225px;
 }
 
