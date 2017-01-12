@@ -39,7 +39,7 @@
 
       if(resultLocation === true && resultMedium === true) {
         formInstallation = new Installation({
-          location: $('#installation-location').val(),
+          location: $('#hidden-location').val(),
           medium: $('#installation-medium').val(),
           artist: $('#installation-artist').val().toUpperCase() || 'UNKNOWN',
           title: $('#installation-title').val().toUpperCase() || 'UNKNOWN',
@@ -63,4 +63,3 @@
 })(window);
 
 installationView.create();
-console.log('log', $('#home-buttons button').val());
