@@ -1,6 +1,7 @@
 'use strict';
 (function(module) {
   var artMap = {}; //abject to attach methods
+  
   var artMapOptions = { // object to contain rlevant map options data
     center : new google.maps.LatLng(cntLat,cntrLng),
     zoom : 8, // default zoom
