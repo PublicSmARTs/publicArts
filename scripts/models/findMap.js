@@ -2,6 +2,28 @@
 (function(module) {
   var findMap = {};
 
+  findMap.placeOne = {
+    name : 'Portland',
+    lat: 45.5231,
+    lng : -122.6765,
+    associated : 'Portland data'
+
+  };
+  findMap.placeTwo = {
+    name : 'Beaverton',
+    lat: 45.4871,
+    lng : -122.8037,
+    associated : 'Beaverton data'
+
+  };
+  findMap.placeThree = {
+    name : 'Tiagard',
+    lat: 45.4312,
+    lng : -122.7715,
+    associated : 'Tiagrad data'
+
+  };
+  findMap.dummyData = [ findMap.placeOne , findMap.placeTwo, findMap.placeThree];
 
 findMap.getLocation = function() {
   var here;
@@ -15,8 +37,7 @@ findMap.getLocation = function() {
 }
 
 findMap.installationsToCoords = function(arrayOFPLaces){
-var coordsArray = [];
-  coordsArray.push(arrayOFPLaces.forEach(getLatLng(place)));
+var coordsArray = arrayOFPLaces.map(findMap.getLatLng);
   return coordsArray;
 }
 
@@ -24,7 +45,6 @@ findMap.getLatLng = function(place){
   var coordinatPair= [place.lat, place.lng];
   return coordinatPair;
 }
-
 
 
 findMap.initMap = function(position) { //creates map
