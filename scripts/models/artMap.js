@@ -41,11 +41,9 @@ function add_autoComplete(map){
   var marker = new google.maps.Marker({
     map: map
   });
-  console.log('yo');
   google.maps.event.addListener(autocomplete, 'place_changed', function() {
     infoWindow.close();
     var place = autocomplete.getPlace();
-    console.log(place.geometry.location);
     if (place.geometry.viewport) {
       map.fitBounds(place.geometry.viewport);
     } else {
@@ -63,6 +61,7 @@ function add_autoComplete(map){
       infoWindow.open(map, marker);
 
     });
+    $('#hidden-location').val(place.formatted_address); 
   });
 
 }
