@@ -35,11 +35,11 @@
         <div  id="install-image">
           <img src="{{imageUrl}}">
         </div>
-        <ul>
+        <ul id="sharelist">
           <li>LOCATION:  <span class="art-attr">{{location}}</span></li>
           <li>MEDIUM:  <span class="art-attr">{{medium}}</span></li>
           <li>ARTIST:  <span class="art-attr">{{artist}}</span></li>
-          <li>TITLE:  <span class="art-attr">{{title}}</span></li>
+          <li>TITLE:  <span class="art-attr"><i>{{title}}</i></span></li>
           <li>DATE RANGE:  <span class="art-attr">{{dateRange}}</span></li>
           <li>SANCTIONED:  <span class="art-attr">{{sanctioned}}</span></li>
           <li>DESCRIPTION:  <span class="art-attr">{{description}}</span></li>
@@ -262,6 +262,9 @@
         <section id=display-installation>
 
         </section>
+        <div id="love-button">
+          <button type="button" value="shareart" class="button-style">Edit/Update</button>
+        </div>
         <div class="center-image">
           <img src="/assets/5_pins_pencils.svg" class="footer-art">
         </div>
