@@ -1,8 +1,7 @@
 'use strict';
 (function(module) {
 
-var lat = 45.5315;
-var lng = -122.6668;
+;
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -18,20 +17,21 @@ function showPosition(position) {
 }
 
 findMap.initMap = function () { //creates map
-
+  var lat = 45.5315;
+  var lng = -122.6668
   var mapOptions = {
     zoom: 10,
-    center: {lat, lng},//new google.maps.LatLng(lat,lng),
+    center: {lat , lng},//new google.maps.LatLng(lat,lng),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
   };
   var map = new google.maps.Map(document.getElementById('findMap'), mapOptions);
-  add_autoComplete();
+  add_autoComplete(map);
 };
 findMap.initMap();
 
 
 /* SOURCED from google tutorial@: http://gmap-tutorial-101.appspot.com/mapsapi101/toc*/
-function add_autoComplete(){
+function add_autoComplete(map){
   var acOptions = {
     types: ['address']
   };
@@ -41,7 +41,7 @@ function add_autoComplete(){
   var marker = new google.maps.Marker({
     map: map
   });
-
+  console.log('yo');
   google.maps.event.addListener(autocomplete, 'place_changed', function() {
     infoWindow.close();
     var place = autocomplete.getPlace();
@@ -53,8 +53,11 @@ function add_autoComplete(){
       map.setZoom(17);
     }
     marker.setPosition(place.geometry.location);
+
     infoWindow.setContent('<div><strong>' + place.name + '</strong><br>');
     infoWindow.open(map, marker);
+
+
     google.maps.event.addListener(marker,'click',function(e){
 
       infoWindow.open(map, marker);
