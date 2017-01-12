@@ -69,6 +69,44 @@
   background-color: lightgray;
 }
 
+.required-field {
+
+}
+
+#findMap {
+  width: 100%;
+  height: 400px;
+  background-color: lightgray;
+}
+/* Optional: Makes the sample page fill the window. */
+
+/*#floating-panel {
+       position: absolute;
+       top: 10px;
+       left: 25%;
+       z-index: 5;
+       background-color: #fff;
+       padding: 5px;
+       border: 1px solid #999;
+       text-align: center;
+       font-family: 'Roboto','sans-serif';
+       line-height: 30px;
+       padding-left: 10px;
+     }
+     #floating-panel {
+       position: absolute;
+       top: 5px;
+       left: 50%;
+       margin-left: -180px;
+       width: 350px;
+       z-index: 5;
+       background-color: #fff;
+       padding: 5px;
+       border: 1px solid #999;
+     }
+     #ac{
+       width: 225px;
+     }*/
 
 @media only screen and (min-width: 640px) {
   .image {

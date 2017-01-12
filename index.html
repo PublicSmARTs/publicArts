@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Public Arts</title>
+    <style>
+
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/vendor/styles/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -67,8 +70,8 @@
         <div class="main-logo"><img src="/assets/logo.svg"></div>
         <p class="parag">We love public art, and we know we're not alone. This webpage aims compile individuals' knowledge about local art to create a resource for finding public anywhere in the world.  Anyone can add, update, and discuss a work of public art, ultimately creating a robust, crowd-sourced set of data. Whether you are traveling to a new place or exploring your own city, the webpage will help you see the beauty around you. For free.</p>
         <div id="home-buttons">
-          <button type="button" name="findart-button" class="button-style">Find Art</button>
-          <button type="button" name="shareart-button" class="button-style">Share Art</button>
+          <button type="button" value="findart" class="button-style">Find Art</button>
+          <button type="button" value="shareart" class="button-style">Share Art</button>
         </div>
         <section class="image-block">
           <h2>POPULAR WORKS</h2>
@@ -102,39 +105,39 @@
           </div>
           <div class="thin-line"></div>
         </header>
-        <div class="map-placeholder"></div>
+        <div id="findMap"></div>
         <div><!-- search options zone -->
           <section>
-            <ul id="filters" class="something">
+            <ul id="filters">
               <li>
-                <select id="medium-filter">
+                <select id="medium-filter"  class="dropdown">
                   <option value="">Choose Medium</option>
                 </select>
               </li>
               <li></li>
               <li>
-                <select id="artist-filter">
+                <select id="artist-filter"  class="dropdown">
                   <option value="">Choose Artist</option>
                 </select>
               </li>
               <li></li>
               <li>
-                <select id="title-filter">
+                <select id="title-filter"  class="dropdown">
                   <option value="">Choose Title</option>
                 </select>
               </li>
                 <li></li>
                 <li>
-                  <select id="dateRange-filter">
+                  <select id="dateRange-filter"  class="dropdown">
                     <option value="">Choose Date Range</option>
                   </select>
                 </li>
                 <li></li>
                 <li>
-                  <select id="sanctioned-filter">
+                  <select id="sanctioned-filter"  class="dropdown">
                     <option value="">Choose Sanction Value</option>
-                    <option value="true">SANCTIONED</option>
-                    <option value="false">UNSANCTIONED</option>
+                    <option value="SANCTIONED">SANCTIONED</option>
+                    <option value="UNSANCTIONED">UNSANCTIONED</option>
                   </select>
                 </li>
                 <li></li>
@@ -148,6 +151,7 @@
                 <li><input type="checkbox" name="has-description" value="true" />Has description
                 </li>
               </div><!--search options -->
+
         <section class="image-block">
           <h2>FEATURED IN YOUR AREA</h2>
           <div class="popular-placeholder" class="clearfix">
@@ -182,24 +186,26 @@
         </header>
         <section>
           <h3>New Installation</h3>
-          <div class="share-placeholder"></div>
+          <div id= "shareMap" class="share-placeholder"></div>
           <form id="new-installation" class="new-form" action="#">
-            <label class="thick">ADDRESS:
-              <input type="text" id="installation-location" name="art-location" placeholder="INSTALLATION ADDRESS" required>
-            </label>
-            <br/>
-            <label class="thick">MEDIUM:
-              <select id="installation-medium" name="art-medium" class="dropdown" required>
-                <option default class="select-default" value="">select medium</option>
-                <option value="ARCHITECTURE">ARCHITECTURE</option>
-                <option value="SCULPTURE">SCULPTURE</option>
-                <option value="MURAL">MURAL</option>
-                <option value="PAINTING">PAINTING</option>
-                <option value="EARTHWORK">EARTHWORK</option>
-                <option value="STREET-ART">STREET ART</option>
-                <option value="OTHER">OTHER</option>
-              </select>
-            </label>
+            <div class="required-field">
+              <label class="thick">ADDRESS:
+                <input type="text" id="installation-location" name="art-location" placeholder="INSTALLATION ADDRESS" required>
+              </label>
+              <br/>
+              <label class="thick">MEDIUM:
+                <select id="installation-medium" name="art-medium" class="dropdown" required>
+                  <option default class="select-default" value="">select medium</option>
+                  <option value="ARCHITECTURE">ARCHITECTURE</option>
+                  <option value="SCULPTURE">SCULPTURE</option>
+                  <option value="MURAL">MURAL</option>
+                  <option value="PAINTING">PAINTING</option>
+                  <option value="EARTHWORK">EARTHWORK</option>
+                  <option value="STREET-ART">STREET ART</option>
+                  <option value="OTHER">OTHER</option>
+                </select>
+              </label>
+            </div>
             <br/>
             <label>ARTIST:
               <input type="text" id="installation-artist" placeholder="ARTIST NAME IF KNOWN">
@@ -227,18 +233,16 @@
                 <option default class="select-default">select if sanctioned</option>
                 <option value="SANCTIONED">SANCTIONED</option>
                 <option value="UNSANCTIONED">UNSANCTIONED</option>
-              </label>
+              </select>
+            </label>
             <br/>
             <label>DESCRIPTION:
-              <input type="text" id="installation-description" placeholder="ADD DESCRIPTION OF INSTALLATION">
+              <input type="textarea" id="installation-description" placeholder="ADD DESCRIPTION OF INSTALLATION">
             </label>
             <br/>
             <label>IMAGE URL:
               <input type="url" id="installation-image-url" placeholder="ADD URL TO IMAGE">
             </label>
-            <!-- <label>RESOURCES:
-              <input type="url" id="installation-image-url" placeholder="ADD URL TO IMAGE">
-            </label> -->
             <button type="submit" name="new-button" class="button-style">ADD NEW INSTALLATION</button>
           </form>
         </section>
@@ -263,9 +267,10 @@
         <div class="thick-line" class="clearfix"></div>
         <p>footer info goes here</p>
       </footer>
+      <!-- API key* .gitignore -->
+      <script src="/appApiKey.js"></script>
       <!-- API calls -->
-      <script src="https://maps.googleapis.com/maps/api/js?key=apiKey&libraries=places&callback=initMap"
-      async defer></script>
+      <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyAWLK7zwl3GRbE1VqeFD3bA7EmwFxFLyks&sensor=false"></script>
       <!-- Vendor files: -->
       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>

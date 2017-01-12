@@ -3,6 +3,7 @@
 
   var searchView = {};
 
+
   searchView.populateFilters = function(){
     var template = Handlebars.compile($('#option-template').text());
 
@@ -32,10 +33,9 @@
       }))//append rows
       );//if
     }); //installation.allTitles
-
-
   };//populateFilters
 
   searchView.populateFilters();
+  //searchView.handleFilters();
   module.searchView = searchView;
 })(window);

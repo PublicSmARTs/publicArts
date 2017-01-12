@@ -2,7 +2,9 @@
 
 page('/', homeController.reveal);
 
-page('/findart', installationsController.reveal);
+page('/findart', findController.reveal);
+
+// page('/findart', installationsController.loadByMedium, installationsController.index);
 
 page('/shareart', shareController.reveal);
 
