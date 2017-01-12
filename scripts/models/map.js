@@ -1,18 +1,5 @@
 'use strict';
 
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-      console.log( "Geolocation is not supported by this browser.");
-    }
-}
-
-function showPosition(position) {
-  var returning = "Latitude: " + position.coords.latitude +
-    "<br>Longitude: " + position.coords.longitude;
-    console.log(returning);
-}
 
 function initMap() { //creates map
   var lat = 45.5315;
