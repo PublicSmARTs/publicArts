@@ -40,6 +40,8 @@
       if(resultLocation === true && resultMedium === true) {
         formInstallation = new Installation({
           location: $('#hidden-location').val(),
+          lat: $('#hidden-lat').val(),
+          lng: $('#hidden-lng').val(),
           medium: $('#installation-medium').val(),
           artist: $('#installation-artist').val().toUpperCase() || 'UNKNOWN',
           title: $('#installation-title').val().toUpperCase() || 'UNKNOWN',
@@ -48,7 +50,7 @@
           description: $('#installation-description').val() || 'UNKNOWN',
           imageUrl: $('#installation-image-url').val()
         });
-        //formInstallation.insertRecord();
+        formInstallation.insertRecord();
         console.log(formInstallation);
         e.delegateTarget.reset();
         //redirect here --TEMP SOLUTION
