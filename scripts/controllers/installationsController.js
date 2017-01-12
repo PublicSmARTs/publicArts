@@ -1,6 +1,7 @@
 'use strict';
 (function(module) {
 
+  Installation.createTable();
   var installationsController = {};
 
   //load by all filters
@@ -10,8 +11,9 @@
       ctx.installation = installationsInMedium;
       next();
     };
-    Installation.findWhere('medium', ctx.params.mediumName, mediumData);
+    Installation.findWhere('medium', ctx.params.mediumName.replace('+', ' '), mediumData);
+      console.log('mediumData ', mediumData);
   };
-
   module.installationsController = installationsController;
+
 })(window);
