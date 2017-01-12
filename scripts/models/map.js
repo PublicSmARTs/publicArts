@@ -1,4 +1,5 @@
 'use strict';
+
 function initMap() { //creates map
   var lat = 45.5315;
   var lng = -122.6668;

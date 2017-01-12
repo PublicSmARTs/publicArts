@@ -9,9 +9,9 @@ homeController.reveal = function() {
   $('#home').show();
 };
 
-var installationsController = {};
+var findController = {};
 
-installationsController.reveal = function() {
+findController.reveal = function() {
   $('.tab-content').hide();
   $('#findart').show();
 };
