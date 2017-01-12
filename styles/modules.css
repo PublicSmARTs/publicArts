@@ -120,6 +120,10 @@ div.main-logo {
   clear: both;
 }
 
+#love-button {
+  margin-left: 40px;
+}
+
 .form-button {
   width: 150px;
   margin: 0 auto;
@@ -139,6 +143,7 @@ select.select-default {
 #sharelist li {
   margin-top: 10px;
 }
+
 
 
 @media only screen and (min-width: 640px) {
@@ -171,6 +176,10 @@ select.select-default {
     height: 50px;
     margin: 0 auto;
     clear: both;
+  }
+
+  #love-button {
+    margin-left: 40px;
   }
 
 }
