@@ -121,6 +121,12 @@ div.main-logo {
   clear: both;
 }
 
+.form-button {
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
 select.select-default {
   font-size: 1em;
   color: lightgray;
@@ -164,4 +170,5 @@ select.select-default {
     margin: 0 auto;
     clear: both;
   }
+
 }
