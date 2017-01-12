@@ -80,7 +80,7 @@
 }
 /* Optional: Makes the sample page fill the window. */
 
-/*#floating-panel {
+#floating-panel {
        position: absolute;
        top: 10px;
        left: 25%;
@@ -106,7 +106,7 @@
      }
      #ac{
        width: 225px;
-     }*/
+  
 
 @media only screen and (min-width: 640px) {
   .image {
