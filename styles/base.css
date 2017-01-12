@@ -29,8 +29,51 @@ p, select span{
   font-family: 'Quicksand', sans-serif;
 }
 
+::-webkit-input-placeholder {
+   color: gray;
+   font-family: 'Quicksand', sans-serif;
+   font-weight: light;
+   font-size: 80%;
+}
+
+:-moz-placeholder {
+   color: gray;
+   font-family: 'Quicksand', sans-serif;
+   font-weight: light;
+   font-size: 80%;
+ }
+
+::-moz-placeholder {
+   color: gray;
+   font-family: 'Quicksand', sans-serif;
+   font-weight: light;
+   font-size: 80%;
+ }
+
+:-ms-input-placeholder {
+   color: gray;
+   font-family: 'Quicksand', sans-serif;
+   font-weight: light;
+   font-size: 80%;
+ }
+
+ select {
+     -webkit-padding-end: 20px;
+     -moz-padding-end: 20px;
+     -webkit-padding-start: 2px;
+     -moz-padding-start: 2px;
+     color: gray;
+     font-family: 'Quicksand', sans-serif;
+     font-weight: light;
+     font-size: 80%;
+ }
+
 main {
   margin: auto;
+}
+
+li {
+  list-style: none;
 }
 
 /*-----TEXT STYLES-----*/
