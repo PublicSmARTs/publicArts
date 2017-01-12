@@ -13,10 +13,10 @@
   };
 
 
-  $('#home-buttons').on('click', 'button', function() {
-    console.log('clicked');
+  $('#home-buttons').on('click', 'button', function(e) {
+    e.preventDefault();
+
     var page = $(this).val();
-    console.log(page);
     if (page === 'shareart') {
       shareController.reveal();
     } else if (page === 'findart') {
