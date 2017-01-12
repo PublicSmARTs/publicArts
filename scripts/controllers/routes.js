@@ -6,6 +6,10 @@ page('/findart', findController.reveal);
 
 // page('/findart', installationsController.loadByMedium, installationsController.index);
 
+// page('/findart/medium/:mediumName',
+//   installationsController.loadByMedium,
+//   installationsController.index);
+
 page('/shareart', shareController.reveal);
 
 page('/loveart', loveController.reveal);
