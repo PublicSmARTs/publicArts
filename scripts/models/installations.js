@@ -110,7 +110,7 @@
   };
 
   Installation.createTable(myTemp);
-  Installation.fetchAll(myTemp);
+
   module.Installation = Installation;
 
 })(window);
