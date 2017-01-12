@@ -1,7 +1,7 @@
 'use strict';
 (function(module) {
 
-;
+
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -64,7 +64,7 @@ function add_autoComplete(map){
     $('#hidden-location').val(place.formatted_address);
     $('#hidden-lat').val(place.geometry.location.lat());
     $('#hidden-lng').val(place.geometry.location.lng());
-    console.log(place);
+
   });
 
 }
