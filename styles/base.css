@@ -138,6 +138,10 @@ footer {
     width: 600px;
   }
 
+  #new-installation.new-form {
+    width: 700px;
+  }
+
   #filter-search {
     width: 500px;
     margin: 0 auto;

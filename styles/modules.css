@@ -159,6 +159,15 @@ select.select-default {
   height: 40px;
 }
 
+#submit-2 {
+  display: block;
+  background-color: #F1623E;
+  color: white;
+  margin: 10px auto;
+  font-family: 'Noticia Text', serif;
+  height: 40px;
+}
+
 @media only screen and (min-width: 640px) {
   .hamburger-menu {
     display: none;
@@ -195,4 +204,7 @@ select.select-default {
     margin-left: 40px;
   }
 
+  #submit-2 {
+    float: right;
+  }
 }
