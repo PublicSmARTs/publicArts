@@ -61,6 +61,8 @@
     });
   };
 
+  
+
   module.installationView = installationView;
 })(window);
 
