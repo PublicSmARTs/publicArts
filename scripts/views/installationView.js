@@ -3,7 +3,7 @@
 
   var installationView = {};
 
-  var render = function(installation) {
+  installationView.render = function(installation) {
     var template = Handlebars.compile($('#installation-template').text());
     return template(installation);
   };
