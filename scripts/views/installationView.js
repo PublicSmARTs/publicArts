@@ -3,13 +3,9 @@
 
   var installationView = {};
 
-  installationView.render = function(installation) {
+  var render = function(installation) {
     var template = Handlebars.compile($('#installation-template').text());
     return template(installation);
-  };
-
-  installationView.initNewInstallationPage = function() {
-
   };
 
 
@@ -61,7 +57,25 @@
     });
   };
 
-  
+  installationView.findObject = function(ctx, next) {
+    var installationData = function (installation) {
+      ctx.installation = installation[0];
+      next();
+    };
+    Installation.findWhere('id', ctx.params.id, installationData);
+  };
+
+  installationView.index = function(ctx) {
+    $('.tab-content').hide();
+    $('#loveart').show();
+
+    function render(ctx) {
+      var template = Handlebars.compile($('#installation-template').text());
+      return template(ctx);
+    }
+    $('#display-installation').empty();
+    $('#display-installation').append(render(ctx));
+  };
 
   module.installationView = installationView;
 })(window);

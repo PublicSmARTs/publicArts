@@ -39,12 +39,9 @@ var allPins = [];
 
       google.maps.event.addListener(marker, "click", function (event) {
         var latitude = this.position.lat();
-        var longitude = this.position.lng();
-        alert(this.position);
-        Installation.findWhere('lat', latitude,  function(data){
-        installationView.render(data);
-        console.log(data);
-        return data;
+        var obj;
+        Installation.findWhere('lat', latitude,  function(data) {
+          page('/loveart/' + data[0].id);
         });
       })
     });
@@ -83,7 +80,7 @@ findMap.initMap = function(position) { //creates map
     center: {lat , lng},//new google.maps.LatLng(lat,lng),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
   };
-  
+
   var map = window.installationMap = new google.maps.Map(document.getElementById('findMap'), mapOptions);
   findMap.add_autoComplete(map);
 

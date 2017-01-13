@@ -4,9 +4,9 @@
   Installation.createTable();
   var installationsController = {};
 
-  // installationsController.index = function(ctx, next) {
-  //   searchView.index(ctx.installation);
-  // };
+  installationsController.index = function(ctx, next) {
+    installationView.index(ctx.installation);
+  };
 
   //load by all filters
   installationsController.loadByMedium = function(ctx, next) {
