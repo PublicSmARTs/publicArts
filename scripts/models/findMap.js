@@ -1,6 +1,5 @@
 
 (function(module) {
-  var map;
   var findMap = {};
   var pinCoords = []
 
@@ -23,20 +22,19 @@ findMap.setPinCoords =  function (filteredArray){
 
 
 var allPins = [];
- findMap.place_all_Pins =  function(locationData, map){ //takes a 2d array of coords
+ findMap.place_all_Pins =  function(locationData){ //takes a 2d array of coords
     var opts = {};
     if (allPins.length) {
       allPins.forEach(function(pin) {
         pin.setMap(null);
       })
     }
-  console.log('in place all pins ' , locationData, map);
     locationData.forEach(function(coordPair){
       opts = {}; //clear out opts obj
       opts.position = new google.maps.LatLng(coordPair[0], coordPair[1]); //grabs coordinants from each object and sets the config for each pin
       var marker = new google.maps.Marker(opts); // creats a new pin at coord currently in opt.position
        // adds each marker obj to an array for access
-      marker.setMap(map); // places new pin on map
+      marker.setMap(installationMap); // places new pin on map
       allPins.push(marker); // add to array for possible later use
     });
     return allPins; // returns array of objs, each obj is a representation of a pin now on the map
@@ -74,7 +72,7 @@ findMap.initMap = function(position) { //creates map
     center: {lat , lng},//new google.maps.LatLng(lat,lng),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
   };
-  map = new google.maps.Map(document.getElementById('findMap'), mapOptions);
+  var map = window.installationMap = new google.maps.Map(document.getElementById('findMap'), mapOptions);
   findMap.add_autoComplete(map);
 
   console.log('in initmap', map);
@@ -112,8 +110,6 @@ findMap.add_autoComplete = function (map){
 
 
 module.findMap = findMap;
-module.installationMap = map;
 Installation.fetchAll(findMap.getLocation); // gets location and renders map centered on that point
 
-console.log('inside iffe', map);
 })(window);
