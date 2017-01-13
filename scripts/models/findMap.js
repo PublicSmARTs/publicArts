@@ -1,5 +1,6 @@
-'use strict';
+
 (function(module) {
+  var map;
   var findMap = {};
   var pinCoords = []
 
@@ -21,10 +22,15 @@ findMap.setPinCoords =  function (filteredArray){
 }
 
 
+var allPins = [];
  findMap.place_all_Pins =  function(locationData, map){ //takes a 2d array of coords
     var opts = {};
-    var allPins = [];
-    console.log('in place all pins ' , locationData);
+    if (allPins.length) {
+      allPins.forEach(function(pin) {
+        pin.setMap(null);
+      })
+    }
+  console.log('in place all pins ' , locationData, map);
     locationData.forEach(function(coordPair){
       opts = {}; //clear out opts obj
       opts.position = new google.maps.LatLng(coordPair[0], coordPair[1]); //grabs coordinants from each object and sets the config for each pin
@@ -38,7 +44,6 @@ findMap.setPinCoords =  function (filteredArray){
 
 findMap.getLocation = function() {
   var here;
-  console.log('yo');
     if (navigator.geolocation) {
       here = navigator.geolocation.getCurrentPosition(findMap.initMap);
     } else {
@@ -62,7 +67,6 @@ findMap.getLatLng = function(place){
 findMap.initMap = function(position) { //creates map
   var lat ;
   var lng ;
-  console.log(position);
   lat = position.coords.latitude;
   lng = position.coords.longitude;
   var mapOptions = {
@@ -70,15 +74,18 @@ findMap.initMap = function(position) { //creates map
     center: {lat , lng},//new google.maps.LatLng(lat,lng),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
   };
-  var map = new google.maps.Map(document.getElementById('findMap'), mapOptions);
+  map = new google.maps.Map(document.getElementById('findMap'), mapOptions);
   findMap.add_autoComplete(map);
+
+  console.log('in initmap', map);
 
   pinCoords = findMap.setPinCoords(Installation.all);
   findMap.place_all_Pins(pinCoords, map);
 };
 
+findMap.clearMap = function() {
 
-
+}
 /* SOURCED from google tutorial@: http://gmap-tutorial-101.appspot.com/mapsapi101/toc*/
 findMap.add_autoComplete = function (map){
   var map= map;
@@ -93,10 +100,10 @@ findMap.add_autoComplete = function (map){
     //console.log(place.geometry.location);
     if (place.geometry.viewport) {
       map.fitBounds(place.geometry.viewport);
-      map.setZoom(8);
+      map.setZoom(12);
     } else {
       map.setCenter(place.geometry.location);
-      map.setZoom(10);
+      map.setZoom(8);
     }
 
     });
@@ -105,7 +112,8 @@ findMap.add_autoComplete = function (map){
 
 
 module.findMap = findMap;
+module.installationMap = map;
 Installation.fetchAll(findMap.getLocation); // gets location and renders map centered on that point
 
-
+console.log('inside iffe', map);
 })(window);

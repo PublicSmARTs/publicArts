@@ -17,7 +17,7 @@
     Installation.allArtists(function(rows) {
       if ($('#artist-filter').append(rows.map(function(row){
         return template({val: row.artist});
-      }))//append rows
+      }))//append rowss
       );//if
     }); //installation.allArtists
 
@@ -36,10 +36,16 @@
   };//populateFilters
 
   searchView.handleFilters = function () {
-    $('#filters').one('change', 'select', function() {
+    $('#filters').on('change', 'select', function() {
       var f = this.id.replace('-filter', '');
       var v = $(this).val();
-      Installation.findWhere(f, v, findMap.setPinCoords);
+      Installation.findWhere(f, v, function (filteredArray) {
+        console.log('array',filteredArray);
+        var pinCoords = findMap.setPinCoords(filteredArray);
+        console.log('pinCoords:', pinCoords);
+        console.log(installationMap);
+        findMap.place_all_Pins(pinCoords, installationMap);
+      });
     });
   };
 
