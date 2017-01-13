@@ -2,8 +2,32 @@
 (function(module) {
   var findMap = {};
   var pinCoords = []
+  var map;
+  var allPins = [];
+
+findMap.anotherfunction = function (){
+
+  function firstDraw (position){
+    var myLat = position.coords.latitude;
+    var myLng = position.coords.longitude;
 
 
+    google.maps.event.trigger(map, 'resize');
+        map.setCenter(new google.maps.LatLng(myLat,myLng))
+  }
+  var here;
+    if (navigator.geolocation) {
+      console.log('something');
+      here = navigator.geolocation.getCurrentPosition(firstDraw);
+    } else {
+      console.log( "Geolocation is not supported by this browser.");
+      here = 'error';
+    }
+    return here;
+
+
+
+}
 
 /*
 a rout triggers a function call>
@@ -21,7 +45,7 @@ findMap.setPinCoords =  function (filteredArray){
 }
 
 
-var allPins = [];
+
  findMap.place_all_Pins =  function(locationData){ //takes a 2d array of coords
     var opts = {};
     if (allPins.length) {
@@ -51,6 +75,7 @@ var allPins = [];
 findMap.getLocation = function() {
   var here;
     if (navigator.geolocation) {
+      console.log('something');
       here = navigator.geolocation.getCurrentPosition(findMap.initMap);
     } else {
       console.log( "Geolocation is not supported by this browser.");
@@ -81,7 +106,7 @@ findMap.initMap = function(position) { //creates map
     mapTypeId: google.maps.MapTypeId.ROADMAP,
   };
 
-  var map = window.installationMap = new google.maps.Map(document.getElementById('findMap'), mapOptions);
+   map = window.installationMap = new google.maps.Map(document.getElementById('findMap'), mapOptions);
   findMap.add_autoComplete(map);
 
   console.log('in initmap', map);
