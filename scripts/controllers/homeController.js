@@ -14,6 +14,7 @@ var findController = {};
 findController.reveal = function() {
   $('.tab-content').hide();
   $('#findart').show();
+  findMap.anotherfunction();
 };
 
 var shareController = {};
