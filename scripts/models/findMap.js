@@ -38,6 +38,17 @@ var allPins = [];
        // adds each marker obj to an array for access
       marker.setMap(map); // places new pin on map
       allPins.push(marker); // add to array for possible later use
+
+      google.maps.event.addListener(marker, "click", function (event) {
+        var latitude = this.position.lat();
+        var longitude = this.position.lng();
+        alert(this.position);
+        Installation.findWhere('lat', latitude,  function(data){
+        installationView.render(data);
+        console.log(data);
+        return data;
+        });
+      })
     });
     return allPins; // returns array of objs, each obj is a representation of a pin now on the map
   }
@@ -107,6 +118,7 @@ findMap.add_autoComplete = function (map){
     }
 
     });
+
   };
 
 
