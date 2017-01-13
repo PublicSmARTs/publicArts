@@ -93,10 +93,10 @@ findMap.add_autoComplete = function (map){
     //console.log(place.geometry.location);
     if (place.geometry.viewport) {
       map.fitBounds(place.geometry.viewport);
-      map.setZoom(8);
+      map.setZoom(12);
     } else {
       map.setCenter(place.geometry.location);
-      map.setZoom(10);
+      map.setZoom(8);
     }
 
     });
