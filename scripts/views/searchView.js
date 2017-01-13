@@ -36,10 +36,16 @@
   };//populateFilters
 
   searchView.handleFilters = function () {
-    $('#filters').one('change', 'select', function() {
+    $('#filters').on('change', 'select', function() {
       var f = this.id.replace('-filter', '');
       var v = $(this).val();
-      Installation.findWhere(f, v, findMap.setPinCoords);
+      Installation.findWhere(f, v, function (filteredArray) {
+        console.log('array',filteredArray);
+        var pinCoords = findMap.setPinCoords(filteredArray);
+        console.log('pinCoords:', pinCoords);
+        console.log(installationMap);
+        findMap.place_all_Pins(pinCoords, installationMap);
+      });
     });
   };
 
@@ -48,6 +54,6 @@
   //when the filters changed, we need to get info about how they changed
 
   searchView.populateFilters();
-  //searchView.handleFilters();
+  searchView.handleFilters();
   module.searchView = searchView;
 })(window);
