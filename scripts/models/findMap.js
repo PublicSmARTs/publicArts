@@ -14,8 +14,8 @@ setPinCoords is passed into place_all_Pins, which creates and places pins at eac
 */
 
 
-findMap.setPinCoords =  function (filteredArray){;
-
+findMap.setPinCoords =  function (filteredArray){
+  console.log('filteredArray', filteredArray);
   var pinCoords = filteredArray.map(findMap.getLatLng);
   return pinCoords;
 }

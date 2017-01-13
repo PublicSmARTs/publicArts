@@ -101,12 +101,13 @@
 
   Installation.findWhere = function(field, value, callback) {
     webDB.execute(
-      {
-        sql: 'SELECT * FROM installation WHERE ' + field + ' = ?; ',
-        data: [value]
-      },
-    callback
-    );
+      [
+        {
+          'sql':'SELECT * FROM Installations WHERE '+ field +' = ? ;',
+          'data': [value],
+        }
+      ],callback
+  );
   };
 
   Installation.createTable(myTemp);

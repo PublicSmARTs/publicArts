@@ -35,6 +35,18 @@
     }); //installation.allTitles
   };//populateFilters
 
+  searchView.handleFilters = function () {
+    $('#filters').one('change', 'select', function() {
+      var f = this.id.replace('-filter', '');
+      var v = $(this).val();
+      Installation.findWhere(f, v, findMap.setPinCoords);
+    });
+  };
+
+  //inside callback function - clear the map and redraw it, that function will be passed data
+  //two things:
+  //when the filters changed, we need to get info about how they changed
+
   searchView.populateFilters();
   //searchView.handleFilters();
   module.searchView = searchView;
