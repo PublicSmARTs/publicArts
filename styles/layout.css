@@ -74,9 +74,16 @@
 }
 
 #install-image {
-  height: 400px;
-  width: 100%;
+  max-height: 400px;
+  width: 400px;
   margin: 20px auto;
+  overflow: hidden;
+}
+
+#location-bar {
+  display: inline;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 #findMap {

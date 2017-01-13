@@ -20,7 +20,6 @@
     };
   });
 
-
   installationView.create = function() {
     console.log($('#new-installation'));
 
