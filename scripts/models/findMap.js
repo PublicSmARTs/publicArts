@@ -72,6 +72,7 @@ findMap.initMap = function(position) { //creates map
     center: {lat , lng},//new google.maps.LatLng(lat,lng),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
   };
+  
   var map = window.installationMap = new google.maps.Map(document.getElementById('findMap'), mapOptions);
   findMap.add_autoComplete(map);
 
