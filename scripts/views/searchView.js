@@ -39,15 +39,10 @@
     $('#filters').one('change', 'select', function() {
       var f = this.id.replace('-filter', '');
       var v = $(this).val();
-      console.log(f);
-      console.log(v);
-      Installation.findWhere(f, v, temp);
+      Installation.findWhere(f, v, findMap.setPinCoords);
     });
   };
 
-  function temp(test) {
-    console.log(test);
-  }
   //inside callback function - clear the map and redraw it, that function will be passed data
   //two things:
   //when the filters changed, we need to get info about how they changed
