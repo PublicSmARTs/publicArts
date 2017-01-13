@@ -46,6 +46,10 @@
         console.log(installationMap);
         findMap.place_all_Pins(pinCoords, installationMap);
       });
+      $('.dropdown').each(function () {
+        $('.dropdown').prop('selectedIndex',0);
+      }
+      );
     });
   };
 
