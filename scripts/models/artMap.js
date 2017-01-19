@@ -17,6 +17,8 @@ function showPosition(position) {
 }
 
 artMap.initMap = function () { //creates map
+  // it may have been helpful to clear up what these numbers represent.
+  // maybe with something like: var pdxCoords = {lat: 45.5315, lng: -122.6668}
   var lat = 45.5315;
   var lng = -122.6668
   var mapOptions = {

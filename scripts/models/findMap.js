@@ -45,7 +45,7 @@ findMap.setPinCoords =  function (filteredArray){
 }
 
 
-
+ //prefer camelCase for function and variable names
  findMap.place_all_Pins =  function(locationData){ //takes a 2d array of coords
     var opts = {};
     if (allPins.length) {
@@ -64,6 +64,7 @@ findMap.setPinCoords =  function (filteredArray){
       google.maps.event.addListener(marker, "click", function (event) {
         var latitude = this.position.lat();
         var obj;
+        // Nice use of both routing and passing functions
         Installation.findWhere('lat', latitude,  function(data) {
           page('/loveart/' + data[0].id);
         });

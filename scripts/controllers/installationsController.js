@@ -7,7 +7,8 @@
   installationsController.index = function(ctx, next) {
     installationView.index(ctx.installation);
   };
-
+  // this is a great use of middleware. Using it to compose async functionality is
+  // one of the things it's best for.
   installationsController.loadByMedium = function(ctx, next) {
     var mediumData = function(installationsInMedium) {
       ctx.installation = installationsInMedium;
