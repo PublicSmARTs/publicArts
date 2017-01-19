@@ -6,7 +6,11 @@
 
   searchView.populateFilters = function(){
     var template = Handlebars.compile($('#option-template').text());
-
+    //The if statements here don't appear to be doing anything. Since
+    //you put your append logic inside the conditional it's going to
+    //evaluate it either way. Which means that it's running the query
+    //and appending the results. No matter what the results thereof
+    //are.
     Installation.allMediums(function(rows) {
       if ($('#medium-filter').append(rows.map(function(row){
         return template({val: row.medium});
@@ -37,6 +41,10 @@
 
   searchView.handleFilters = function () {
     $('#filters').on('change', 'select', function() {
+      // this is a neat way to solve the problem of getting Which
+      // filter was interacted with from the element itself. It might
+      // be a bit more idiomatic and stable to store the needed
+      // information as a data attribute instead of on the id.
       var f = this.id.replace('-filter', '');
       var v = $(this).val();
       Installation.findWhere(f, v, function (filteredArray) {

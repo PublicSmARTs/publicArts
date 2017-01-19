@@ -6,7 +6,13 @@
       this[e] = opts[e];
     },this);
   }
-
+  // The technical term for a function like this is a noop (no operation)
+  // it's possible that you may need something like this. Usually, though,
+  // you'd use a noop for a function that was expecting to be passed a callback
+  // and would throw a TypeError because it was trying to call something that
+  // isn't there. Looking through your code it seems like none of the places where
+  // you pass myTemp actually have to have a callback so you likely could have just
+  // left it out.
   function myTemp(){
   };
 
@@ -78,7 +84,14 @@
     }); //execute select
   };//fetchAll
 
-
+  // the following functions (the ones that start with 'all') likely could have
+  // been refactored to take another argument. Like:
+  // Installation.allBy = function(category, callback) {
+  //    webDB.execute('SELECT DISTINCT ' + category + ' FROM Installations', callback);
+  // }
+  // or if you wanted to get even fancier about it you could go through a list of all of
+  // the categories and return the results of each query as an array. This gets tough though
+  // because you have to manage the sequence of async calls returning.
   Installation.allMediums = function(callback) {
     webDB.execute('SELECT DISTINCT medium FROM Installations', callback);
   };
